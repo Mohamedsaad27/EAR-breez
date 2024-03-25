@@ -49,4 +49,14 @@ class Product extends Model
     {
         return $this->hasOne(ProductVariation::class);
     }
+
+    public function scopeSearch($query,$value){
+        $query->where('id','like',"%{$value}%")
+              ->orWhere('title','like',"%{$value}%")
+              ->orWhere('price','like',"%{$value}%")
+              ->orWhere('status','like',"%{$value}%")
+              ->orWhereHas('category',function ($subQuery) use($value){
+                $subQuery->where('name','like',"%{$value}%");
+              });
+    }
 }

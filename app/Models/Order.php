@@ -24,4 +24,14 @@ class Order extends Model
     {
         return $this->belongsToMany(Product::class);
     }
+
+    public function scopeSearch($query, $value) {
+        $query->where('id', 'like', "%{$value}%")
+            ->orWhere('status', 'like', "%{$value}%")
+            ->orWhere('user_id', 'like', "%{$value}%")
+            ->orWhereHas('user', function ($subQuery) use ($value) {
+                $subQuery->where('name', 'like', "%{$value}%");
+            });
+    }
+
 }

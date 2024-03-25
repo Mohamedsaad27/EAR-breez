@@ -10,16 +10,16 @@
         <div class="container-fluid bg-secondary-dark mt-5">
             <div class="flex justify-between items-center">
                 <p class="fs-3 font-medium">Products</p>
-                <form action="">
-                    <button class="btn btn-success" type="submit">Submit</button>
-                </form>
+                <a href="{{route('seller.addNewProduct')}}">
+                    <button class="btn btn-success" type="button">Add New Product</button>
+                </a>
             </div>
             <div class="container-fluid">
                 <div class="card bg-primary-dark">
                     <div class="card-body pb-5 pt-3">
                         <hr>
                         <!-- Include the order-table component here -->
-                        <livewire:order-table />
+                        <livewire:product-table />
                     </div>
                 </div>
             </div>
