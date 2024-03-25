@@ -12,7 +12,7 @@
                 <!--Page Name -->
                 <div class="row ">
                     <div class="col-6">
-                        <h1>Add-Product</h1>
+                        <h1>Add Product</h1>
                     </div>
                     <div class="col-6">
                         <a href="{{route('seller.productListPage')}}" class="btn btn-success m-2">BACK TO PRODUCT LIST</a>
@@ -21,7 +21,19 @@
                 <br>
                 <div class="row">
                     <div class="col-12">
-                        <form class="border border-1 border-solid rounded p-3" method="POST" action=""  enctype="multipart/form-data">
+                        @if(session('success'))
+                            <div class="alert alert-success" id="success">
+                                {{ session('success') }}
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+                                    setTimeout(function(){
+                                        $('#success').fadeOut();
+                                    }, 3000);
+                                });
+                            </script>
+                        @endif
+                        <form class="border border-1 border-solid rounded p-3" method="POST" action="{{route('seller.storeNewProduct')}}"  enctype="multipart/form-data">
                             @csrf
                             <p class="fw-bold d-inline">General information</p><span class="text-danger">*</span>
                             <p class="input-info">To start selling, all you need is a name and a price.</p>
@@ -32,7 +44,7 @@
                                     <div class="input-group mb-3">
                                         <x-text-input id="title" name="title" type="text" class=" form-control" placeholder="Title Of Product" />
                                     </div>
-                                    <x-input-error class="text-danger" :messages="$errors->get('title')" />
+                                       <x-input-error class="text-danger" :messages="$errors->get('title')" />
                                 </div>
                                 <div class="col-6">
                                     <label class="form-label">Subtitle</label>
@@ -46,7 +58,7 @@
                             <div class="row">
                                 <label class="form-label">Description</label>
                                 <div class="input-group mb-3">
-                                    <x-text-input style="height: 100px" id="description" name="description" type="text" class="form-control" />
+                                    <x-text-input style="height: 100px" id="description" placeholder="Enter Description" name="description" type="text" class="form-control" />
                                 </div>
                                 <x-input-error class="text-danger" :messages="$errors->get('description')" />
                                 <p class="input-info">Give your product a short and clear title.</p>
@@ -57,21 +69,21 @@
                                 <div class="col-4">
                                     <label class="form-label">Available Quantity<span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input style=" " id="quantity" name="quantity" type="text" class="form-control" />
+                                        <x-text-input style=" " placeholder="Quantity" id="quantity" name="quantity" type="text" class="form-control" />
                                     </div>
                                     <x-input-error class="text-danger" :messages="$errors->get('quantity')" />
                                 </div>
                                 <div class="col-4">
                                     <label class="form-label">Price EGP<span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input style=" " id="price" name="price" type="text" class="form-control"/>
+                                        <x-text-input style=" " id="price" placeholder="Price" name="price" type="text" class="form-control"/>
                                     </div>
                                     <x-input-error class="text-danger" :messages="$errors->get('price')" />
                                 </div>
                                 <div class="col-4">
                                     <label class="form-label">Offer Percentage<span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input style=" " id="offer" name="offer" type="text" class="form-control" />
+                                        <x-text-input style=" " id="offer" placeholder="Offer" name="offer" type="text" class="form-control" />
                                     </div>
                                     <x-input-error class="text-danger" :messages="$errors->get('offer')" />
                                 </div>
@@ -93,7 +105,7 @@
                                         <tr>
                                             <td>color</td>
                                             <td>
-                                                <x-text-input style="" id="color" name="color" type="text" class="form-control" "/>
+                                                <x-text-input style="" id="color" placeholder="Color Of Product" name="color" type="text" class="form-control" />
                                                 <x-input-error class="text-danger" :messages="$errors->get('color')" />
                                             </td>
                                         </tr>
@@ -101,14 +113,18 @@
                                         <tr>
                                             <td>Size</td>
                                             <td>
-                                                <x-text-input style=" " id="size" name="size" type="text" class="form-control" "/>
-                                                <x-input-error class="text-danger" :messages="$errors->get('size')" />
+                                                <x-text-input style=" " id="size"   placeholder="Size Of Product" name="size" type="text" class="form-control" />
+                                                <x-input-error class="text-danger"  :messages="$errors->get('size')" />
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>category</td>
                                             <td>
-                                                <x-text-input style=" " id="category" name="category" type="text" class="form-control""/>
+                                                <select id="category" name="category_id" class="form-control">
+                                                    @foreach($categories as $category)
+                                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                                    @endforeach
+                                                </select>
                                                 <x-input-error class="text-danger" :messages="$errors->get('category')" />
                                             </td>
                                         </tr>
@@ -123,29 +139,20 @@
                                 <p class="input-info">Used to represent your product during checkout, social sharing and more.</p>
                                 <label for="imageUpload" class="dashed-border text-center">
                                     <span id="fileInputLabel">Drop your file here, or click to browse</span>
-                                    <input style="display: none;" type="file" id="imageUpload" name="images[]" accept="image/*" multiple>
+                                    <input style="display: none;" type="file" id="imageUpload" name="image" accept="image" >
                                 </label>
                             </div>
                             <div class="row">
                                 <div class="d-flex flex-wrap">
-
-                                        <div class="card m-2" style="width: 100px; height: 100px">
-                                            <img style="width: 100px; height: 100px" src="" class="card-img-top" alt="Image">
-                                            <div class="card-body">
-                                                <a href="" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </div>
                                 </div>
                             </div>
                             <br>
                             <br>
                             <div class="d-flex justify-content-center">
-                                <a href="" class="delete-product">Delete This Product</a>
                             </div>
                             <br>
-                            <br>
                             <div >
-                                <center><button class="btn btn-success btn-custom-width" type="submit">Edit</button></center>
+                                <center><button class="btn btn-success btn-custom-width" type="submit">Add Product</button></center>
                             </div>
                         </form>
                     </div>

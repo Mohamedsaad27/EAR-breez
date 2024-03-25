@@ -47,7 +47,7 @@
                                 <td>{{$product->quantity == 0 ? "Out Stock" : "In Stock" }}</td>
                                 <td>{{$product->category->name}}</td>
                                 <td>
-                                    <a href="{{route('admin.edit-products', $product->id)}}">
+                                    <a href="{{route('seller.viewEditProduct', $product->id)}}">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </td>

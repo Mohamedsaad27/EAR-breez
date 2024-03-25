@@ -67,7 +67,7 @@
                             </td>
                             <td class="px-4 py-3">{{ucfirst($product->category->name)}}</td>
                             <td class="px-4 py-3 flex items-center justify-end">
-                                <button class="px-3 py-1 bg-red-500 text-white rounded">Edit</button>
+                                <a href="{{route('seller.viewEditProduct',$product->id)}}" class="me-1 py-1" ><p class="edit"><i class="bi bi-pencil-square"></i> Edit</p></a>
                             </td>
                         </tr>
                         @endforeach

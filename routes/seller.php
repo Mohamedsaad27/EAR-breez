@@ -29,12 +29,12 @@ Route::post('/seller-logout', [AuthenticatedSessionController::class, 'destroy']
 ////////////////////////////////////////////////////
 Route::group(['middleware' => 'auth:seller', 'prefix' => 'seller'],function (){
     Route::get('/order',[SellerController::class,'viewOrderPage'])->name('seller.orderPage');
-    Route::get('/seller/productslist',[SellerController::class,'viewProductListPage'])->name('seller.productListPage');
+    Route::get('/productslist',[SellerController::class,'viewProductListPage'])->name('seller.productListPage');
     Route::get('/addnewproduct',[SellerController::class,'addNewProduct'])->name('seller.addNewProduct');
     Route::get('/adminpage',[SellerController::class,'editBusinessInformation'])->name('seller.editBusinessInformation');
     Route::get('/transactionhistory',[SellerController::class,'viewTransactionHistory'])->name('seller.viewTransactionHistory');
     Route::get('/contactus',[SellerController::class,'viewContactUsPage'])->name('seller.viewContactUsPage');
     Route::post('/store-new-product',[SellerController::class,'storeNewProduct'])->name('seller.storeNewProduct');
-    Route::get('/edit-product/{product_id}',[SellerController::class,'viewEditProduct'])->name('seller.viewEditProduct');
-    Route::post('/edit-product/{product_id}',[SellerController::class,'storeEditProduct'])->name('seller.storeEditProduct');
+    Route::get('/edit-product/{product}',[SellerController::class,'viewEditProduct'])->name('seller.viewEditProduct');
+    Route::post('/edit-product/{product}',[SellerController::class,'save_edited_product'])->name('seller.storeEditProduct');
 });
