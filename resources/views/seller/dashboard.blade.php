@@ -20,7 +20,7 @@
                         <form action="" method="GET">
                             @csrf
                             <input type="month" name="date" type="date" id="selectedDate" name="date"
-                                style="padding: 5px;">
+                                   style="padding: 5px;">
                             <button class="btn btn-success" type="submit">Submit</button>
                         </form>
                     </div>
@@ -119,31 +119,31 @@
                     <div class="container">
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Inventory</th>
-                                    <th>Status</th>
-                                </tr>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Inventory</th>
+                                <th>Status</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                @foreach ($topSalesProduct as $product)
-                                    <tr>
-                                        <td>
-                                            {{ $product->title }}
-                                        </td>
-                                        <td>
-                                            {{ $product->price }} EGP
-                                        </td>
-                                        <td>
-                                            {{ $product->quantity }} PCS
-                                        </td>
-                                        <td>
-                                            {{ $product->status }}
-                                        </td>
-                                    </tr>
-                                @endforeach
-                                <!-- Repeat rows for other products as needed -->
+                            @foreach ($topSalesProduct as $product)
+                                <tr>
+                                    <td>
+                                        {{ $product->title }}
+                                    </td>
+                                    <td>
+                                        {{ $product->price }} EGP
+                                    </td>
+                                    <td>
+                                        {{ $product->quantity }} PCS
+                                    </td>
+                                    <td>
+                                        {{ $product->status }}
+                                    </td>
+                                </tr>
+                            @endforeach
+                            <!-- Repeat rows for other products as needed -->
                             </tbody>
                         </table>
                     </div>

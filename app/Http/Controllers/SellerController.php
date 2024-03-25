@@ -35,7 +35,9 @@ class SellerController extends Controller
     public function viewOrderPage(){
         return view('seller.order');
     }
-
+    public function addNewProduct(){
+        return view('seller.addNewProduct');
+    }
     public function viewProductListPage(){
         return view('seller.products-List');
     }
