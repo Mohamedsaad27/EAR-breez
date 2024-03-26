@@ -12,7 +12,7 @@
                 <!--Page Name -->
                 <div class="row ">
                     <div class="col-6">
-                        <h1>Edit-Product</h1>
+                        <h1>Edit Product</h1>
                     </div>
                     <div class="col-6">
                         <a href="{{route('seller.productListPage')}}" class="btn btn-success m-2">BACK TO PRODUCT LIST</a>
@@ -140,15 +140,21 @@
                             </div>
                             <br>
                             <br>
-                            <div class="d-flex justify-content-center">
-                                <a href="{{route('admin.delete-product', $product->id)}}" class="delete-product">Delete This Product</a>
-                            </div>
+
+
                             <br>
                             <br>
+
                             <div >
                                 <center><button class="btn btn-success btn-custom-width" type="submit">Edit</button></center>
                             </div>
                         </form>
+                        <div class="d-flex justify-content-center">
+                            <form action="{{ route('seller.deleteProduct', $product->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Delete This Product</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

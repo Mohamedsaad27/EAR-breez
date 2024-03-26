@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\ContactUsRequest;
 use App\Http\Requests\EditProductRequest;
 use App\Http\Requests\StoreProductRequest;
 use App\Models\Category;
+use App\Models\ContactUs;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductImage;
@@ -39,6 +41,20 @@ class SellerController extends Controller
         $sellers = Seller::paginate(10);
         return view('admin.sellers', compact('sellers'));
     }
+    public function addBusinessInformation(){
+        return view('seller.addBusinessInformation');
+    }
+
+    public function sendContactMessage(ContactUsRequest $contactUsRequest){
+        ContactUs::create([
+            'seller_id'=>Auth::guard('seller')->user()->id,
+            'seller_name'=>$contactUsRequest->name,
+            'seller_email'=>$contactUsRequest->email,
+            'subject'=>$contactUsRequest->subject,
+            'message'=>$contactUsRequest->message,
+        ]);
+        return redirect()->back()->with('success', 'Message sent successfully!');
+    }
 
     public function viewOrderPage(){
         return view('seller.order');
@@ -73,10 +89,12 @@ class SellerController extends Controller
         return view('seller.products-List');
     }
 
-    public function editBusinessInformation(){
+    public function editBusinessInformation(Seller $seller){
         return view('seller.admin');
     }
+    public function storeEditBusinessInformation(Seller $seller){
 
+    }
     public function viewContactUsPage(){
         return view('seller.contact-us');
     }
@@ -138,7 +156,12 @@ class SellerController extends Controller
 
         return redirect()->route('seller.productListPage');
     }
-
+    public function deleteProduct(Product $product)
+    {
+        $product->delete();
+//        $products = Product::with('seller', 'category')->paginate(10);
+        return redirect()->route('seller.productListPage',);
+    }
     public function search(Request $request): view
     {
         $search= $request->input('search');
