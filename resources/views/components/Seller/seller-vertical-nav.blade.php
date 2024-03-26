@@ -26,7 +26,7 @@
             </a>
         </li>
         <li class="list-group-item">
-            <a class="d-flex align-items-center" href="{{ route('seller.editBusinessInformation') }}">
+            <a class="d-flex align-items-center" href="{{ route('seller.editBusinessInformation',Auth::guard('seller')->user()->id) }}">
                 <img src="{{ @asset('/image/menu66.png') }}">
                 Admin
             </a>
