@@ -77,12 +77,12 @@
                     <p class="m-0 fs-3">your Available Balance</p>
                 </div>
                 <div class="d-flex align-items-center">
-                    <div class="border rounded me-3">
-                        <p>Total Balanece</p>
+                    <div class="border rounded me-3 p-3">
+                        <p class="mb-2">Total Balanece</p>
                         <h3>70.5000 EGP</h3>
                     </div>
-                    <div class="border rounded">
-                        <p>Avai!able Balance</p>
+                    <div class="border rounded p-3">
+                        <p class="mb-2">Avai!able Balance</p>
                         <h3>70.5000 EGP</h3>
                     </div>
                 </div>
