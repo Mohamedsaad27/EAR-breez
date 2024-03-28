@@ -32,4 +32,15 @@ class Seller extends Authenticatable
     public function contactus(){
         $this->hasMany(ContactUs::class);
     }
+    public function businessInformation()
+    {
+        return $this->hasOne(BusinessInformation::class);
+    }
+    public function businessContactInformation()
+    {
+        return $this->hasOne(BusinessContactInformation::class);
+    }
+    public  function bankTransfer(){
+        return $this->hasOne(BankTransfers::class);
+    }
 }

@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\ContactUsRequest;
+use App\Http\Requests\EditBusinessInformationRequest;
 use App\Http\Requests\EditProductRequest;
+use App\Http\Requests\StoreBankTransfersRequest;
 use App\Http\Requests\StoreProductRequest;
+use App\Models\BankTransfers;
+use App\Models\BusinessContactInformation;
+use App\Models\BusinessInformation;
 use App\Models\Category;
 use App\Models\ContactUs;
 use App\Models\Order;
@@ -90,10 +95,49 @@ class SellerController extends Controller
     }
 
     public function editBusinessInformation(Seller $seller){
-        return view('seller.admin');
+        $businessInformationBySellerId = BusinessInformation::where('seller_id','=',$seller->id)->first();
+        $businessContactInformationBySellerId = BusinessContactInformation::where('seller_id','=',$seller->id)->first();
+        $bankTransefersBySellerId = BankTransfers::where('seller_id','=',$seller->id)->first();
+        return view('seller.admin',compact('seller',
+            'businessInformationBySellerId',
+        'businessContactInformationBySellerId',
+        'bankTransefersBySellerId'));
     }
-    public function storeEditBusinessInformation(Seller $seller){
+    public function storeEditBusinessInformation(Request  $request, $sellerId)
+    {
+        $validatedData = $request->validate([
+            'business_name' => 'required|string',
+            'business_address' => 'required|string',
+            'city' => 'required|string',
+            'zip_code' => 'required|string',
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'required|string',
+            'website' => 'nullable|string',
+            'address' => 'required|string',
+        ]);
+        $businessInformation = BusinessInformation::where('seller_id', $sellerId)->firstOrFail();
+        $businessInformation->update([
+            'business_name' => $validatedData['business_name'],
+            'business_address' => $validatedData['business_address'],
+            'city' => $validatedData['city'],
+            'postal_code' => $validatedData['zip_code'],
+        ]);
 
+        // Update Business Contact Information
+        $businessContactInformation = BusinessContactInformation::where('seller_id', $sellerId)->firstOrFail();
+        $businessContactInformation->update([
+            'first_name' => $validatedData['first_name'],
+            'last_name' => $validatedData['last_name'],
+            'email' => $validatedData['email'],
+            'phone' => $validatedData['phone'],
+            'website' => $validatedData['website'],
+            'address' => $validatedData['address'],
+        ]);
+
+        // Redirect or return response
+        return redirect()->back()->with('success', 'Business information updated successfully.');
     }
     public function viewContactUsPage(){
         return view('seller.contact-us');
@@ -171,4 +215,5 @@ class SellerController extends Controller
 
         return view('admin.sellers', compact('sellers'));
     }
+
 }
