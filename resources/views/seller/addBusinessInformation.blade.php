@@ -6,15 +6,7 @@
             <div class="alert alert-success" id="success-message">
                 {{ session('success') }}
             </div>
-
-            <script>
-                // Hide the success message after the specified duration
-                setTimeout(function() {
-                    document.getElementById('success-message').style.display = 'none';
-                }, {{ session('message_duration') ?? 5000 }});
-            </script>
         @endif
-
         <form enctype="multipart/form-data" action="{{route('seller.storeBusinessInformation')}}" method="post">
             @csrf
             <div class="title">

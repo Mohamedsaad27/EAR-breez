@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-3">
                 <!-- the vertical nave -->
-                @include('components.admin.vertical-nav')
+                @include('components.Seller.seller-vertical-nav')
             </div>
             <div class="col align-items-end ">
                 <!--Page Name -->

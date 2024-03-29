@@ -136,7 +136,7 @@ class SellerController extends Controller
             'address' => $request->address,
             'seller_id' => $sellerId
         ]);
-        return redirect()->route('seller.Dashboard')->with('success', 'Business information stored successfully.')->with('message_duration', 5000);
+        return redirect()->route('seller.Dashboard')->with('success', 'Business information stored successfully.');
 
     }
 
