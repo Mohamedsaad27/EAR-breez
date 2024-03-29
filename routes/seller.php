@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 
 // Auth Routes //////////////////////////////
-Route::get('seller/dashboard',[SellerController::class,'viewDashboard'])->middleware(['auth:seller'])->name('seller.Dashboard');
-
+Route::middleware('auth:seller')->group(function () {
+    Route::get('seller/dashboard', [SellerController::class, 'viewDashboard'])->name('seller.Dashboard');
+});
 Route::get('/seller-register', [RegisteredUserController::class, 'create'])
     ->middleware('guest:seller')
     ->name('seller.register');
@@ -30,6 +31,7 @@ Route::post('/seller-logout', [AuthenticatedSessionController::class, 'destroy']
 ////////////////////////////////////////////////////
 Route::group(['middleware' => 'auth:seller', 'prefix' => 'seller'],function (){
     Route::get('/add-business-information',[SellerController::class,'addBusinessInformation'])->name('seller.addBusinessInformation');
+    Route::post('/store-business-information',[SellerController::class,'storeBusinessInformation'])->name('seller.storeBusinessInformation');
     Route::get('/adminpage/{seller}',[SellerController::class,'editBusinessInformation'])->name('seller.editBusinessInformation');
     Route::post('/edit-business-information/{seller}',[SellerController::class,'storeEditBusinessInformation'])->name('seller.storeEditBusinessInformation');
     Route::get('/order',[SellerController::class,'viewOrderPage'])->name('seller.orderPage');

@@ -168,8 +168,13 @@
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="border rounded me-3 p-3">
-                        <p class="mb-2">Total Balanece</p>
-                        <h3>{{$bankTransefersBySellerId->amount}}EGP</h3>
+                        <p class="mb-2">Total Balance</p>
+                        @if ($bankTransefersBySellerId)
+                            <h3>{{ $bankTransefersBySellerId->amount}} EGP</h3>
+                        @else
+                            <p>0 EGP</p>
+                        @endif
+
                     </div>
                     <div class="border rounded p-3">
                         <p class="mb-2">Avai!able Balance</p>

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\ContactUsRequest;
-use App\Http\Requests\EditBusinessInformationRequest;
 use App\Http\Requests\EditProductRequest;
-use App\Http\Requests\StoreBankTransfersRequest;
 use App\Http\Requests\StoreProductRequest;
 use App\Models\BankTransfers;
 use App\Models\BusinessContactInformation;
@@ -28,7 +26,7 @@ class SellerController extends Controller
     public function viewDashboard(){
 
         return view('seller.dashboard',[
-            'products' =>Product::all(),
+            'products' =>Product::where('seller_id','=',Auth::guard('seller')->user()->id)->get(),
             'orders'=>Order::all(),
             'deliveredOrders'=>Order::where('status','=','shipped')->get(),
             'returnedOrders'=>Order::where('status','=','cancelled')->get(),
@@ -92,6 +90,54 @@ class SellerController extends Controller
     }
     public function viewProductListPage(){
         return view('seller.products-List');
+    }
+    public function storeBusinessInformation(Request $request)
+    {
+        $sellerId = Auth::guard('seller')->user()->id;
+        $fileName = null;
+
+        $request->validate([
+            'business_name' => 'required|string',
+            'business_address' => 'required|string',
+            'city' => 'required|string',
+            'postal_code' => 'required|string',
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'email' => 'required|email|unique:business_contact_information,phone',
+            'phone' => 'required|string|unique:business_contact_information,phone',
+            'website' => 'nullable|string|url|unique:business_contact_information,website',
+            'address' => 'required|string',
+            'certificate_information' => 'nullable|file|mimes:doc,docx,pdf',
+            'comment' => 'nullable|string',
+        ]);
+
+        if ($request->hasFile('certificate_information')) {
+            $file = $request->file('certificate_information');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/certificates'), $fileName);
+        }
+
+        BusinessInformation::create([
+            'business_name' => $request->business_name,
+            'business_address' => $request->business_address,
+            'city' => $request->city,
+            'postal_code' => $request->postal_code,
+            'certificate_information' => $fileName, // Assign $fileName here
+            'comment' => $request->comment,
+            'seller_id' => $sellerId
+        ]);
+
+        BusinessContactInformation::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'website' => $request->website,
+            'address' => $request->address,
+            'seller_id' => $sellerId
+        ]);
+        return redirect()->route('seller.Dashboard')->with('success', 'Business information stored successfully.')->with('message_duration', 5000);
+
     }
 
     public function editBusinessInformation(Seller $seller){

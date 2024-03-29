@@ -14,7 +14,9 @@ class BusinessInformation extends Model
         'business_address',
         'city',
         'postal_code',
-        'seller_id'
+        'seller_id',
+        'certificate_information',
+        'comment'
     ];
     public function seller(){
         return $this->hasOne(Seller::class);
