@@ -1,0 +1,357 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10%;
+  margin-bottom: 10;
+  cursor: pointer;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+/*shop*/
+.back{
+  /* Set the background image */
+  background-image: url('image/shop.png');
+
+
+  /* Set background image size */
+  background-size: cover; /* or contain, or specify width and height */
+
+  /* Set background image position */
+  background-position: center top; /* or specify position */
+
+  /* Set background image to fixed to keep it in place when scrolling */
+  background-attachment: fixed;
+
+  /* Add fallback background color in case the image is not available */
+  background-color: #616060; /* Choose a suitable fallback color */
+  nav {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 300px; /* Adjust the height as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Add transparency to the background color */
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+}.shop2{
+  position: absolute; 
+  top: 20%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 60px;
+  color: white;
+}
+}.logo-container {
+position: absolute; /* تمركز المحتوى بالتنسيق النسبي للنافذة */
+top: 8%; /* وضع العنصر في منتصف الصفحة عموديا */
+left: 50%; /* وضع العنصر في منتصف الصفحة أفقيا */
+transform: translate(-50%, -50%); /* لتعديل موقع العنصر بناء على حجمه */
+
+}
+.search-container {
+position: absolute;
+top: 4%;
+right: 10%;
+padding: 10px;
+background-color: #f5f5f5;
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+width: 250PX;
+}
+
+.search-container input[type="text"] {
+padding: 2px;
+border: 1px solid #fbf8f8;
+border-radius: 1px;
+flex: 1; /* السماح للمربع بتمدد لملء المساحة المتبقية */
+}
+
+.search-container img {
+width: 20px; /* تحديد عرض الصورة */
+height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+margin-left: 5px; /* تباعد بين زر البحث والصورة */
+}
+.image-button {
+
+width: 25px; /* تحديد عرض الزر */
+height: 30px; /* تحديد ارتفاع الزر */
+background-image: url('C:/Users/Win11/Desktop/Graduation Project/user before1/image/Wishlist.png'); /* تعيين الصورة كخلفية */
+background-size: cover; /* تغطية الزر بالكامل بالصورة */
+border: none; /* إزالة الحدود */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+background-color: rgba(192, 192, 192, 0);
+padding-left: 70%;
+position: absolute;
+top: 4%;
+right: 5%;
+padding: 10px;
+
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+}.image-button:hover{
+background-color: #00693d;
+}
+.image-button2:hover{
+background-color: #00693d;
+}
+.image-button2 {
+
+width: 25px; /* تحديد عرض الزر */
+height: 30px; /* تحديد ارتفاع الزر */
+background-image: url('C:/Users/Win11/Desktop/Graduation Project/user before1/image/Cart1.png'); /* تعيين الصورة كخلفية */
+background-size: cover; /* تغطية الزر بالكامل بالصورة */
+border: none; /* إزالة الحدود */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+background-color: rgba(192, 192, 192, 0);
+padding-left: 70%;
+position: absolute;
+top: 4%;
+right: 2%;
+padding: 10px;
+
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+} 
+.text-image-button {
+width: 20%;
+color: black;
+top:80%;
+left:30%;
+display: flex; /* تعيين عرض المربع كفليكس */
+align-items: center; /* توسيط العناصر رأسياً */
+justify-content: flex; /* توسيط العناصر أفقياً */
+background-color: transparent; /* إزالة لون الخلفية الافتراضي للزر */
+border: none; /* إزالة حدود الزر */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+}
+
+.text-image-button img {
+margin-right: 10px; /* تباعد بين النص والصورة */
+width: 30px; /* تحديد عرض الصورة */
+height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+}
+.text-image-button:hover{
+background-color: silver;
+}
+/* تصميم عام للصفحة */
+
+
+/* تنسيق الحاوية للمنتجات */
+#product-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr); /* أعمدة متكررة، يمكن تغيير العدد حسب الحاجة */
+grid-gap: 30px; /* تباعد بين العناصر */
+padding: 80px;
+}
+
+/* تنسيق كل عنصر من عناصر المنتج */
+.product {
+background-color: #fff;
+border-radius: 5px;
+padding: 20px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق الصورة */
+.product img {
+max-width: 100%;
+height: auto;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+/* تنسيق اسم المنتج */
+.product p {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+/* تنسيق تقييم النجوم */
+.rating {
+color: #ffc107; /* لون النجوم */
+margin-bottom: 10px;
+}
+
+.rating span {
+font-size: 20px;
+margin-right: 3px;
+}
+
+/* تنسيق زر "عرض المزيد" */
+#load-more-btn {
+display: block;
+margin: 20px auto;
+padding: 10px 20px;
+background-color: #297c58;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 160px;
+}
+
+#load-more-btn:hover {
+background-color: #134d30;
+} .line {
+display: inline-block;
+width: 100%; /* عرض الخط */
+height: 1px; /* سمك الخط */
+background-color: white; /* لون الخط */
+margin-left: 10px; 
+margin-right: 50px; 
+margin-top: -450px;/* تعديل المسافة بين النص والخط */
+vertical-align: middle ;
+}
+.group11-76-2mC {
+
+background-color: #31aa72;
+box-sizing: border-box;
+
+left: 0;
+bottom: 5;
+position: absolute;
+margin-top: 50px;
+margin-right: 20px;
+width: 100%;
+height: 20%;
+display: flex;
+
+
+
+
+
+.frame1-859-Lmt {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 111%;
+    margin-bottom: 70%;
+
+  .group1-73-V8z {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    height: 100%;
+    margin-left: 90px;
+    width: 60%;
+    
+
+    .free1-delivery-EcN {
+      color: #ffffff;
+      flex-shrink: 1;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 20px;
+      font-weight: 500;
+      font: optional;
+      line-height: 1.5;
+      white-space: nowrap;
+      display: flex;
+    
+    }
+    .for1-all-oders-over-500egp-B1p {
+      color: #ffffff;
+      flex-shrink: 1;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+      white-space: nowrap;
+      display: flex;
+      width: 40%;
+
+    }
+  }
+  .group1-74-fxa {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    height: 100%;
+    margin-right: 90px;
+    width: 55%;
+
+    .days1-return-ccv {
+      color: #ffffff;
+      flex-shrink: 1;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: nowrap;
+      display: flex;
+    }
+    .if1-goods-have-problems-kDL {
+      color: #ffffff;
+      flex-shrink: 1;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+      white-space: nowrap;
+      display: flex;
+    }
+  }
+  .group1-75-Uf8 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    height: 100%;
+    display: flex;
+
+    .secure1-payment-Qog {
+      color: #ffffff;
+      flex-shrink: 1;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: nowrap;
+      display: flex;
+    }
+    .secure1-payment-LhL {
+      color: #ffffff;
+      flex-shrink: 1;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+      white-space: nowrap;
+      display: flex;
+    }
+  }
+}
+}

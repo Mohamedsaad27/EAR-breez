@@ -1,0 +1,1478 @@
+.home {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('Main\ BG.png'); /* تغيير background.jpg إلى اسم ملف الصورة الخلفية الخاص بك */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+nav {
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+  position: fixed;
+  top: 3%;
+  left: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 0px;
+  padding-left: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 150%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.font{
+  color: white;
+  text-align: left;
+  font-size: 300%;
+  margin-top: 15%;
+  margin-left: 5%;
+  font-family:'Times New Roman', Times, serif;
+}.logo {
+  position: absolute;
+  height: 15%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.button-58 {
+  align-items: center;
+  background-color: rgb(22, 134, 78);
+  border: 2px solid rgb(22, 134, 78);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 1%;
+  margin-top: 20px;
+  
+  width: 16%;
+}
+
+.button-58:focus {
+  color: #171e29;
+}
+
+.button-58:hover {
+  background-color: #5d5f5e;
+  border-color: #505051;
+  fill: rgb(81, 82, 83);
+}
+
+.button-58:active {
+  background-color: #5e5f60;
+  border-color: #5f6061;
+  fill: rgb(112, 113, 114);
+}
+.button-59 {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid rgb(246, 248, 247);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 5%;
+  
+  width: 16%;
+}
+
+.button-59:focus {
+  color: #171e29;
+}
+
+.button-59:hover {
+  background-color: #505051;
+  border-color: rgb(101, 100, 100);
+  fill: rgb(101, 100, 100);
+  
+}
+
+.button-59:active {
+  background-color: #5e5f60;
+  border-color: #5f6061;
+  fill: rgb(112, 113, 114);
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}.search-container {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+width: 250PX;
+}
+
+.search-container input[type="text"] {
+  padding: 2px;
+  border: 1px solid #fbf8f8;
+  border-radius: 1px;
+  flex: 1; /* السماح للمربع بتمدد لملء المساحة المتبقية */
+}
+
+.search-container img {
+  width: 20px; /* تحديد عرض الصورة */
+  height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+  margin-left: 5px; /* تباعد بين زر البحث والصورة */
+}
+.imagee-button {
+
+width: 10%;
+height: 10%;
+background-size: cover;
+background-image: url('image/1.png'); /* تعيين الصورة كخلفية */
+  background-size: cover; 
+  background-color:
+img{
+  height:40%;
+  width: 20%;
+}
+}
+.image-button2 {
+
+  width: 25px; /* تحديد عرض الزر */
+  height: 30px; /* تحديد ارتفاع الزر */
+  background-image: url('Cart1.png'); /* تعيين الصورة كخلفية */
+  background-size: cover; /* تغطية الزر بالكامل بالصورة */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+  background-color: rgba(192, 192, 192, 0);
+  padding-left: 70%;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  padding: 10px;
+  
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+} 
+.image-button3 {
+
+  width: 25px; /* تحديد عرض الزر */
+  height: 30px; /* تحديد ارتفاع الزر */
+  background-image: url('C:\Users\Win11\Desktop\Graduation Project\user before1\image/user.png'); /* تعيين الصورة كخلفية */
+  background-size: cover; /* تغطية الزر بالكامل بالصورة */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+  background-color: rgba(192, 192, 192, 0);
+  padding-left: 70%;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  padding: 10px;
+  
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+}
+.text-image-button {
+  width: 20%;
+  color: black;
+  top:80%;
+  left:30%;
+  display: flex; /* تعيين عرض المربع كفليكس */
+  align-items: center; /* توسيط العناصر رأسياً */
+  justify-content: flex; /* توسيط العناصر أفقياً */
+  background-color: transparent; /* إزالة لون الخلفية الافتراضي للزر */
+  border: none; /* إزالة حدود الزر */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+}
+
+.text-image-button img {
+  margin-right: 10px; /* تباعد بين النص والصورة */
+  width: 30px; /* تحديد عرض الصورة */
+  height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+}
+.text-image-button:hover{
+  background-color: silver;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.div2{
+  margin: 20% auto;
+  margin-bottom: 1%;
+  h4{
+    margin-bottom: -3%;
+    margin-left: 4%;
+  }
+  h1{
+    margin-left: 4%;
+  }
+
+}.div3{
+  margin: 20% auto;
+  margin-bottom: -10%;
+  h4{
+    margin-bottom: -20%;
+    margin-left: 4%;
+  }
+  h1{
+    margin-left: 4%;
+    
+  }}
+.shop-all{
+  
+margin-left: 83%;
+background-color: #1a6340;
+border: 1px solid transparent;
+border-radius: 3px;
+box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+font-size: 13px;
+font-weight: 400;
+line-height: 1.15385;
+outline: none;
+position: relative;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: baseline;
+white-space: nowrap;
+width: 140px;
+height: 50px;
+margin-bottom: -100%;
+
+}
+
+
+
+.shop-all:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.shop-all:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}.shop-all1{
+  
+  margin-left: 83%;
+  background-color: #1a6340;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  width: 140px;
+  height: 50px;
+  margin-top: -50%;
+  
+  }
+  
+  
+  
+  .shop-all1:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .shop-all1:active {
+    background-color: #0064bd;
+    box-shadow: none;
+  }
+.container {
+  max-width: 10000px;
+  margin: 0% auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #faf9f9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 10px;
+  
+}
+
+.product h3 {
+  margin: 0;
+  
+  font-size: 18px;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.rating {
+  color: #f39c12; /* لون النجوم */
+}
+.spacer {
+  height: 1000px; /* ارتفاع المسافة لإظهار التمرير */
+}
+.half-line {
+  width: 80%;
+  margin-top: 7%;
+margin-left: 10%;
+  border-bottom: 2px solid black;
+}
+.container1 {
+  max-width: 10000px;
+  margin: 20% auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20%;
+  margin-top: 1%;
+}
+
+.product {
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #faf9f9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 10px;
+  
+}
+
+.product h3 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.rating {
+  color: #f39c12; /* لون النجوم */
+}
+.spacer {
+  height: 1000px; /* ارتفاع المسافة لإظهار التمرير */
+}
+.content {
+  padding: 20px;
+  margin-top: 130%;
+  margin-bottom: 20%;
+  width: 100%;
+  height: 600px;
+  background-color: #2aa76b;
+}
+.content{
+  img{
+  margin-top: -20%;
+  width: 60%;
+  height: 100%;
+}h1{
+  margin-left: 73%;
+  margin-top: 1%;
+  color: white;
+}h4{
+  margin-left: 70%;
+  margin-top: 10%;
+  color: white;
+  align-items: center;
+}h3{
+  margin-left: 73%;
+  margin-top: 1%;
+  color: white;
+  align-items: center;
+}
+
+}.div6{
+  padding: 1% 1% 1% 1%;
+}
+.group1-76-2mC {
+
+  background-color: #31aa72;
+  box-sizing: border-box;
+  
+  left: 0;
+  bottom: 5;
+  position: absolute;
+  margin-top: 50px;
+  margin-right: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+
+
+  
+  
+
+  .frame1-859-Lmt {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 111%;
+      margin-bottom: 70%;
+
+    .group1-73-V8z {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-left: 90px;
+      width: 60%;
+      
+
+      .free1-delivery-EcN {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        font: optional;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      
+      }
+      .for1-all-oders-over-500egp-B1p {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+        width: 40%;
+
+      }
+    }
+    .group1-74-fxa {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-right: 90px;
+      width: 55%;
+
+      .days1-return-ccv {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+      .if1-goods-have-problems-kDL {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+    }
+    .group1-75-Uf8 {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      display: flex;
+
+      .secure1-payment-Qog {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+      .secure1-payment-LhL {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+    }
+  }
+}
+/*about*/
+
+/*shop*/
+.back{
+  /* Set the background image */
+  background-image: url('image/shop.png');
+
+
+  /* Set background image size */
+  background-size: cover; /* or contain, or specify width and height */
+
+  /* Set background image position */
+  background-position: center top; /* or specify position */
+
+  /* Set background image to fixed to keep it in place when scrolling */
+  background-attachment: fixed;
+
+  /* Add fallback background color in case the image is not available */
+  background-color: #616060; /* Choose a suitable fallback color */
+  nav {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 300px; /* Adjust the height as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Add transparency to the background color */
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+}.shop2{
+  position: absolute; 
+  top: 20%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 60px;
+  color: white;
+}
+}.logo-container {
+position: absolute; /* تمركز المحتوى بالتنسيق النسبي للنافذة */
+top: 8%; /* وضع العنصر في منتصف الصفحة عموديا */
+left: 50%; /* وضع العنصر في منتصف الصفحة أفقيا */
+transform: translate(-50%, -50%); /* لتعديل موقع العنصر بناء على حجمه */
+
+}
+.search-container {
+position: absolute;
+top: 4%;
+right: 10%;
+padding: 10px;
+background-color: #f5f5f5;
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+width: 250PX;
+}
+
+.search-container input[type="text"] {
+padding: 2px;
+border: 1px solid #fbf8f8;
+border-radius: 1px;
+flex: 1; /* السماح للمربع بتمدد لملء المساحة المتبقية */
+}
+
+.search-container img {
+width: 20px; /* تحديد عرض الصورة */
+height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+margin-left: 5px; /* تباعد بين زر البحث والصورة */
+}
+.image-button {
+
+width: 25px; /* تحديد عرض الزر */
+height: 30px; /* تحديد ارتفاع الزر */
+background-image: url('image/Wishlist.png'); /* تعيين الصورة كخلفية */
+background-size: cover; /* تغطية الزر بالكامل بالصورة */
+border: none; /* إزالة الحدود */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+background-color: rgba(192, 192, 192, 0);
+padding-left: 70%;
+position: absolute;
+top: 4%;
+right: 5%;
+padding: 10px;
+
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+}.image-button:hover{
+background-color: #00693d;
+}
+.image-button2:hover{
+background-color: #00693d;
+}
+.image-button2 {
+
+width: 25px; /* تحديد عرض الزر */
+height: 30px; /* تحديد ارتفاع الزر */
+background-image: url('image/Cart1.png'); /* تعيين الصورة كخلفية */
+background-size: cover; /* تغطية الزر بالكامل بالصورة */
+border: none; /* إزالة الحدود */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+background-color: rgba(192, 192, 192, 0);
+padding-left: 70%;
+position: absolute;
+top: 4%;
+right: 2%;
+padding: 10px;
+
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+} 
+/*-----------------------*/
+.about-6ut {
+  background-color: #ffffff;
+  height: 314rem;
+  position: relative;
+  width: 100%;
+
+  .rectangle-1-Wyc {
+    height: 38.6rem;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    vertical-align: top;
+    width: 146rem;
+  }
+  .rectangle-50-1Qa {
+    background-color: #ffffff;
+    height: 231.4rem;
+    left: 1rem;
+    position: absolute;
+    top: 38rem;
+    width: 144rem;
+  }
+  .group-8-USa {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 12.425rem;
+    left: 0.5rem;
+    position: absolute;
+    top: 0.2rem;
+    width: 144rem;
+
+    .auto-group-qnxy-PJe {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      height: 12.4rem;
+      margin: 0rem 4.7rem 0.025rem 9.6rem;
+      width: calc(100% - 14.3rem);
+
+      .group-1000005960-4Qn {
+        align-items: center;
+        column-gap: 2.2rem;
+        display: flex;
+        flex-shrink: 0;
+        height: calc(100% - 10rem);
+        margin: 4.4rem 12.5rem 5.6rem 0rem;
+
+        .home-m4J {
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.5;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .shop-3Xc {
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.5;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .editorial-AML {
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.5;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .about-6Vt {
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.5;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .login-register-Ro4 {
+          color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.5;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+      .logo-1-9yx {
+        cursor: pointer;
+        flex-shrink: 0;
+        height: 12.4rem;
+        margin-right: 19.5rem;
+        object-fit: cover;
+        vertical-align: top;
+        width: 11.7rem;
+      }
+      .group-7-gDC {
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        height: calc(100% - 8.6rem);
+        margin: 4.3rem 0;
+
+        .search-component-set-DD8 {
+          background-color: #f5f5f5;
+          border-radius: 0.4rem;
+          box-sizing: border-box;
+          cursor: pointer;
+          flex-shrink: 0;
+          height: 100%;
+          margin-right: 2.6rem;
+          padding: 0.7rem 1.2rem 0.7rem 2rem;
+          width: 26.5rem;
+
+          .frame-550-6Gv {
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            height: 100%;
+            padding: 0.3rem 0.4rem 0.3rem 0rem;
+            width: 100%;
+
+            .what-are-you-looking-for-Zpi {
+              color: #000000;
+              flex-shrink: 0;
+              font-family: Poppins, 'Source Sans Pro';
+              font-size: 1.2rem;
+              font-weight: 400;
+              line-height: 1.5;
+              margin-right: 3.8rem;
+              text-align: center;
+              text-transform: uppercase;
+              white-space: nowrap;
+            }
+            .component-2-fcr {
+              flex-shrink: 0;
+              height: 1.6rem;
+              object-fit: contain;
+              vertical-align: top;
+              width: 1.6rem;
+            }
+          }
+        }
+        .frame-551-mft {
+          align-items: center;
+          box-sizing: border-box;
+          display: flex;
+          flex-shrink: 0;
+          height: calc(100% - 0.6rem);
+          margin: 0.3rem 0;
+          padding-right: 4.8rem;
+
+          .wishlist-JQv {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 3.2rem;
+            margin-right: 1.6rem;
+            object-fit: contain;
+            vertical-align: top;
+            width: 3.2rem;
+          }
+          .cart1-with-buy-37c {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 3.2rem;
+            object-fit: contain;
+            vertical-align: top;
+            width: 3.2rem;
+          }
+        }
+      }
+    }
+    .line-3-m3c {
+      flex-shrink: 0;
+      height: 0;
+      object-fit: contain;
+      vertical-align: top;
+      width: 144rem;
+    }
+  }
+  .about-us-JpE {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    font-family: Philosopher, 'Source Sans Pro';
+    font-size: 8rem;
+    font-weight: 700;
+    height: 9rem;
+    justify-content: center;
+    left: 57.2rem;
+    line-height: 1.12;
+    position: absolute;
+    top: 21.25rem;
+    white-space: nowrap;
+    width: 31.6rem;
+  }
+  .group-1000005979-oFC {
+    align-items: flex-start;
+    display: flex;
+    height: 77.3rem;
+    left: 11.3rem;
+    position: absolute;
+    top: 52rem;
+    width: 135.3rem;
+
+    .auto-group-pyhk-v4v {
+      flex-shrink: 0;
+      margin: 4.5rem 5.8rem 0rem 0rem;
+      width: 56.2rem;
+
+      .our-story-eFp {
+        color: #000000;
+        font-family: Philosopher, 'Source Sans Pro';
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+        line-height: 1.28;
+        margin-bottom: 5rem;
+        white-space: nowrap;
+      }
+      .frame-868-kZk {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-mus-mauris-vitae-ultricies-leo-integer-malesuada-nunc-in-nulla-posuere-sollicitudin-aliquam-ultrices-morbi-blandit-cursus-risus-at-ultrices-mi-tempus-imperdiet-libero-enim-sed-faucibus-turpis-in-cursus-mattis-molestie-a-iaculis-at-erat-nibh-cras-pulvinar-mattis-nunc-sed-blandit-libero-pellentesque-elit-ullamcorper-dignissim-cras-tincidunt-pharetra-et-ultrices-neque-ornare-aenean-euismod-elementum-tvr {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 2.2rem;
+          font-weight: 400;
+          line-height: 1.5;
+          margin-bottom: 2rem;
+          max-width: 56.2rem;
+        }
+        .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-mus-mauris-vitae-ultricies-leo-integer-malesuada-nunc-in-nulla-posuere-sollicitudin-aliquam-ultrices-NzS {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 2.2rem;
+          font-weight: 400;
+          line-height: 1.5;
+          max-width: 53.6rem;
+        }
+      }
+    }
+    .parcel-paper-cartons-with-shopping-cart-logo-trolley-laptop-keyboard-1-QAS {
+      border-radius: 1rem;
+      flex-shrink: 0;
+      height: 71.7rem;
+      object-fit: cover;
+      vertical-align: top;
+      width: 73.3rem;
+    }
+  }
+  .group-1000005978-Uvz {
+    height: 70.6629rem;
+    left: 11.3rem;
+    position: absolute;
+    top: 138.9478rem;
+    width: 127.7rem;
+
+    .why-choose-us--oiN {
+      color: #111111;
+      display: flex;
+      font-family: Philosopher, 'Source Sans Pro';
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1.2000000763;
+      margin-bottom: 8.1442rem;
+      white-space: nowrap;
+    }
+    .group-1000005976-LCW {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .auto-group-vx6a-5Qz {
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        margin: 0rem 35.3rem 4.216rem 0rem;
+        width: calc(100% - 35.3rem);
+
+        .totally-sustainable-QTG {
+          color: #111111;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 3.2rem;
+          font-weight: 500;
+          line-height: 1.2000000477;
+          margin-right: 41.4rem;
+          white-space: nowrap;
+        }
+        .free-delivery-L62 {
+          color: #111111;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 3.2rem;
+          font-weight: 500;
+          line-height: 1.2000000477;
+          white-space: nowrap;
+        }
+      }
+      .auto-group-su1p-fPC {
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        margin-bottom: 10.187rem;
+        width: 100%;
+
+        .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-mus-mauris-vitae-ultricies-leo-integer-malesuada-nunc-in-nulla-posuere-sollicitudin-aliquam-ultrices-DQi {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.5;
+          margin-right: 16.3rem;
+          max-width: 55.7rem;
+        }
+        .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-mus-mauris-vitae-ultricies-leo-integer-malesuada-nunc-in-nulla-posuere-sollicitudin-aliquam-ultrices-4AS {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.5;
+          max-width: 55.7rem;
+        }
+      }
+      .auto-group-qsns-HYz {
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        margin: 0rem 31.5rem 3.316rem 0rem;
+        width: calc(100% - 31.5rem);
+
+        .secure-payment-pJ2 {
+          color: #111111;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 3.2rem;
+          font-weight: 500;
+          line-height: 1.5;
+          margin-right: 45.5rem;
+          white-space: nowrap;
+        }
+        .days-return-9LJ {
+          color: #111111;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 3.2rem;
+          font-weight: 500;
+          line-height: 1.5;
+          white-space: nowrap;
+        }
+      }
+      .auto-group-zzox-g5L {
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        width: 100%;
+
+        .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-mus-mauris-vitae-ultricies-leo-integer-malesuada-nunc-in-nulla-posuere-sollicitudin-aliquam-ultrices-pxE {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.5;
+          margin-right: 16.3rem;
+          max-width: 55.7rem;
+        }
+        .lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-mus-mauris-vitae-ultricies-leo-integer-malesuada-nunc-in-nulla-posuere-sollicitudin-aliquam-ultrices-5NN {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Poppins, 'Source Sans Pro';
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.5;
+          max-width: 55.7rem;
+        }
+      }
+    }
+  }
+  .group-1000005973-L3Q {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50.3rem;
+    left: 1rem;
+    position: absolute;
+    top: 263.7rem;
+    width: 144rem;
+
+    .group-76-T82 {
+      background-color: #31aa72;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      height: 15.9rem;
+      padding: 4.1rem 10.6rem 4rem 10.6rem;
+      width: 100%;
+
+      .frame-859-xqU {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        width: 111.7rem;
+
+        .group-73-6wg {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+          margin-right: 17.1rem;
+
+          .free-delivery-eiJ {
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            white-space: nowrap;
+          }
+          .for-all-oders-over-500egp-npW {
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+          }
+        }
+        .group-74-uu8 {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+          margin-right: 18.4rem;
+
+          .days-return-41L {
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            white-space: nowrap;
+          }
+          .if-goods-have-problems-ZCz {
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+          }
+        }
+        .group-75-tWA {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+
+          .secure-payment-SXg {
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            white-space: nowrap;
+          }
+          .secure-payment-yGi {
+            color: #ffffff;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .auto-group-sp2j-VF4 {
+      align-items: center;
+      border-top: solid 0.1rem #d9d9d9;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      padding: 5rem 6.95rem 0rem 6.95rem;
+      width: 100%;
+
+      .frame-857-p2S {
+        align-items: flex-end;
+        display: flex;
+        flex-shrink: 0;
+        height: 8.3rem;
+        margin-bottom: 5rem;
+        width: 100%;
+
+        .group-26-kAz {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+          margin-right: 6.9rem;
+
+          .links-JCW {
+            color: #9f9f9f;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 3.5rem;
+            white-space: nowrap;
+          }
+          .home-shop-editorial-about-SJi {
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-left: 0.2rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+          }
+        }
+        .group-77-Lut {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+          margin-right: 7rem;
+
+          .account-twQ {
+            color: #9f9f9f;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 3.5rem;
+            white-space: nowrap;
+          }
+          .my-account-login-register-shopping-cart-wishlist-EkN {
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-left: 0.2rem;
+            white-space: nowrap;
+          }
+        }
+        .group-30-jx2 {
+          flex-shrink: 0;
+          width: 28.7rem;
+
+          .newsletter-Hie {
+            color: #9f9f9f;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 3.3rem;
+            white-space: nowrap;
+          }
+          .group-29-R4A {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .auto-group-od4s-yLa {
+              align-items: center;
+              display: flex;
+              flex-shrink: 0;
+              margin-bottom: 0.3rem;
+              width: 100%;
+
+              .enter-your-email-address-KfL {
+                color: #9f9f9f;
+                flex-shrink: 0;
+                font-family: Poppins, 'Source Sans Pro';
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-right: 3.8rem;
+                white-space: nowrap;
+              }
+              .subscribe-3bL {
+                color: #000000;
+                flex-shrink: 0;
+                font-family: Poppins, 'Source Sans Pro';
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 1.5;
+                white-space: nowrap;
+              }
+            }
+            .auto-group-javu-b74 {
+              border-top: solid 0.1rem #000000;
+              box-sizing: border-box;
+              flex-shrink: 0;
+              height: 0.1rem;
+              margin-right: 0.0997rem;
+              width: 28.6003rem;
+            }
+          }
+        }
+      }
+      .group-44-sqG {
+        border-bottom: solid 0.1rem #d9d9d9;
+        border-top: solid 0.1rem #d9d9d9;
+        box-sizing: border-box;
+        color: #000000;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 1.6rem;
+        font-weight: 400;
+        height: 16.1rem;
+        line-height: 1.5;
+        margin: 0rem 3.049rem 0rem 3.049rem;
+        padding: 3.5rem 0.2007rem;
+        white-space: nowrap;
+        width: calc(100% - 6.0985rem);
+      }
+    }
+  }
+  .group-1000005977-g22 {
+    align-items: center;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 18.15rem;
+    left: 8.5rem;
+    position: absolute;
+    top: 232.45rem;
+    width: 128rem;
+
+    .auto-group-savi-CFG {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      padding-bottom: 3.2rem;
+      width: 100%;
+
+      .for-inquiries-contact-us-vwx {
+        color: #111111;
+        display: flex;
+        flex-shrink: 0;
+        font-family: Philosopher, 'Source Sans Pro';
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 1.2000000763;
+        margin-bottom: 1.15rem;
+        white-space: nowrap;
+      }
+      .please-leave-your-email-and-we-will-send-you-back-ed4 {
+        color: #111111;
+        display: flex;
+        flex-shrink: 0;
+        font-family: Philosopher, 'Source Sans Pro';
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.4;
+        white-space: nowrap;
+      }
+    }
+    .auto-group-dsjp-NJA {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      height: 5.6rem;
+      width: 100%;
+
+      .input-field-uot {
+        background-color: #ffffff;
+        border: solid 0.1rem #d2d2d7;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        color: #808080;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 1.4rem;
+        font-weight: 500;
+        height: 100%;
+        line-height: 1.2000000817;
+        margin-right: 1.6rem;
+        padding: 1.95rem 1.6rem;
+        white-space: nowrap;
+        width: 63.2rem;
+      }
+      .button--ZdY {
+        align-items: center;
+        background-color: #00693d;
+        border-radius: 0.5rem;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 1.6rem;
+        font-weight: 500;
+        height: 100%;
+        justify-content: center;
+        letter-spacing: 0.048rem;
+        line-height: 1.2000000477;
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: 63.2rem;
+      }
+    }
+  }
+}

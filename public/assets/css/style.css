@@ -1,0 +1,1149 @@
+
+/*shop*/
+.back{
+    /* Set the background image */
+
+
+    /* Set background image size */
+    background-size: cover; /* or contain, or specify width and height */
+
+    /* Set background image position */
+    background-position: center top; /* or specify position */
+
+    /* Set background image to fixed to keep it in place when scrolling */
+    background-attachment: fixed;
+
+    /* Add fallback background color in case the image is not available */
+    background-color: #616060; /* Choose a suitable fallback color */
+    nav {
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 300px; /* Adjust the height as needed */
+  }
+  
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Add transparency to the background color */
+  }
+  
+  nav ul li {
+      float: left;
+  }
+  
+  nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+      background-color: rgba(0, 0, 0, 0.8); 
+  }.shop2{
+    position: absolute; 
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    vertical-align: middle;
+    font-size: 60px;
+    color: white;
+  }
+}.logo-container {
+  position: absolute; /* تمركز المحتوى بالتنسيق النسبي للنافذة */
+  top: 8%; /* وضع العنصر في منتصف الصفحة عموديا */
+  left: 50%; /* وضع العنصر في منتصف الصفحة أفقيا */
+  transform: translate(-50%, -50%); /* لتعديل موقع العنصر بناء على حجمه */
+ 
+}
+.search-container {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+width: 250PX;
+}
+
+.search-container input[type="text"] {
+  padding: 2px;
+  border: 1px solid #fbf8f8;
+  border-radius: 1px;
+  flex: 1; /* السماح للمربع بتمدد لملء المساحة المتبقية */
+}
+
+.search-container img {
+  width: 20px; /* تحديد عرض الصورة */
+  height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+  margin-left: 5px; /* تباعد بين زر البحث والصورة */
+}
+.image-button {
+
+  width: 25px; /* تحديد عرض الزر */
+  height: 30px; /* تحديد ارتفاع الزر */
+  background-image: url('C:/Users/Win11/Desktop/Graduation Project/user before1/image/Wishlist.png'); /* تعيين الصورة كخلفية */
+  background-size: cover; /* تغطية الزر بالكامل بالصورة */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+  background-color: rgba(192, 192, 192, 0);
+  padding-left: 70%;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  padding: 10px;
+  
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+}.image-button:hover{
+  background-color: #00693d;
+}
+.image-button2:hover{
+  background-color: #00693d;
+}
+.image-button2 {
+
+  width: 25px; /* تحديد عرض الزر */
+  height: 30px; /* تحديد ارتفاع الزر */
+  background-image: url('C:/Users/Win11/Desktop/Graduation Project/user before1/image/Cart1.png'); /* تعيين الصورة كخلفية */
+  background-size: cover; /* تغطية الزر بالكامل بالصورة */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+  background-color: rgba(192, 192, 192, 0);
+  padding-left: 70%;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  padding: 10px;
+  
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+} 
+.text-image-button {
+  width: 20%;
+  color: black;
+  top:80%;
+  left:30%;
+  display: flex; /* تعيين عرض المربع كفليكس */
+  align-items: center; /* توسيط العناصر رأسياً */
+  justify-content: flex; /* توسيط العناصر أفقياً */
+  background-color: transparent; /* إزالة لون الخلفية الافتراضي للزر */
+  border: none; /* إزالة حدود الزر */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+}
+
+.text-image-button img {
+  margin-right: 10px; /* تباعد بين النص والصورة */
+  width: 30px; /* تحديد عرض الصورة */
+  height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+}
+.text-image-button:hover{
+  background-color: silver;
+}
+.back2{
+  /* Set the background image */
+
+
+  /* Set background image size */
+  background-size: cover; /* or contain, or specify width and height */
+
+  /* Set background image position */
+  background-position: center top; /* or specify position */
+
+  /* Set background image to fixed to keep it in place when scrolling */
+  background-attachment: fixed;
+
+  /* Add fallback background color in case the image is not available */
+  nav {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 300px; /* Adjust the height as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Add transparency to the background color */
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+}.shop2{
+  position: absolute; 
+  top: 20%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 60px;
+  color: white;
+}
+.logo-container {
+position: absolute; /* تمركز المحتوى بالتنسيق النسبي للنافذة */
+top: 8%; /* وضع العنصر في منتصف الصفحة عموديا */
+left: 50%; /* وضع العنصر في منتصف الصفحة أفقيا */
+transform: translate(-50%, -50%); /* لتعديل موقع العنصر بناء على حجمه */
+
+}
+.search-container {
+position: absolute;
+top: 4%;
+right: 10%;
+padding: 10px;
+background-color: #f5f5f5;
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+width: 250PX;
+}
+
+.search-container input[type="text"] {
+padding: 2px;
+border: 1px solid #fbf8f8;
+border-radius: 1px;
+flex: 1; /* السماح للمربع بتمدد لملء المساحة المتبقية */
+}
+
+.search-container img {
+width: 20px; /* تحديد عرض الصورة */
+height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+margin-left: 5px; /* تباعد بين زر البحث والصورة */
+}
+.image-button {
+
+width: 25px; /* تحديد عرض الزر */
+height: 30px; /* تحديد ارتفاع الزر */
+background-image: url('C:/Users/Win11/Desktop/Graduation Project/user before1/image/Wishlist.png'); /* تعيين الصورة كخلفية */
+background-size: cover; /* تغطية الزر بالكامل بالصورة */
+border: none; /* إزالة الحدود */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+background-color: rgba(192, 192, 192, 0);
+padding-left: 70%;
+position: absolute;
+top: 4%;
+right: 5%;
+padding: 10px;
+
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+}.image-button:hover{
+background-color: #00693d;
+}
+.image-button2:hover{
+background-color: #00693d;
+}
+.image-button2 {
+
+width: 25px; /* تحديد عرض الزر */
+height: 30px; /* تحديد ارتفاع الزر */
+background-image: url('C:/Users/Win11/Desktop/Graduation Project/user before1/image/Cart1.png'); /* تعيين الصورة كخلفية */
+background-size: cover; /* تغطية الزر بالكامل بالصورة */
+border: none; /* إزالة الحدود */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+background-color: rgba(192, 192, 192, 0);
+padding-left: 70%;
+position: absolute;
+top: 4%;
+right: 2%;
+padding: 10px;
+
+border-radius: 5px;
+display: flex;
+align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+} }
+.text-image-button {
+width: 20%;
+color: black;
+top:80%;
+left:30%;
+display: flex; /* تعيين عرض المربع كفليكس */
+align-items: center; /* توسيط العناصر رأسياً */
+justify-content: flex; /* توسيط العناصر أفقياً */
+background-color: transparent; /* إزالة لون الخلفية الافتراضي للزر */
+border: none; /* إزالة حدود الزر */
+cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+}
+
+.text-image-button img {
+margin-right: 10px; /* تباعد بين النص والصورة */
+width: 30px; /* تحديد عرض الصورة */
+height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+}
+.text-image-button:hover{
+background-color: silver;
+}
+/* تصميم عام للصفحة */
+
+
+/* تنسيق الحاوية للمنتجات */
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* أعمدة متكررة، يمكن تغيير العدد حسب الحاجة */
+  grid-gap: 30px; /* تباعد بين العناصر */
+  padding: 80px;
+}
+
+/* تنسيق كل عنصر من عناصر المنتج */
+.product {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق الصورة */
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* تنسيق اسم المنتج */
+.product p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* تنسيق تقييم النجوم */
+.rating {
+  color: #ffc107; /* لون النجوم */
+  margin-bottom: 10px;
+}
+
+.rating span {
+  font-size: 20px;
+  margin-right: 3px;
+}
+
+/* تنسيق زر "عرض المزيد" */
+#load-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #297c58;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 160px;
+}
+
+#load-more-btn:hover {
+  background-color: #134d30;
+} .line {
+  display: inline-block;
+  width: 100%; /* عرض الخط */
+  height: 1px; /* سمك الخط */
+  background-color: white; /* لون الخط */
+  margin-left: 10px; 
+  margin-right: 50px; 
+  margin-top: -450px;/* تعديل المسافة بين النص والخط */
+  vertical-align: middle ;
+}
+ .group11-76-2mC {
+
+  background-color: #31aa72;
+  box-sizing: border-box;
+  
+  left: 0;
+  bottom: 5;
+  position: absolute;
+  margin-top: 50px;
+  margin-right: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+
+
+  
+  
+
+  .frame1-859-Lmt {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 111%;
+      margin-bottom: 70%;
+
+    .group1-73-V8z {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-left: 90px;
+      width: 60%;
+      
+
+      .free1-delivery-EcN {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        font: optional;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      
+      }
+      .for1-all-oders-over-500egp-B1p {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+        width: 40%;
+
+      }
+    }
+    .group1-74-fxa {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-right: 90px;
+      width: 55%;
+
+      .days1-return-ccv {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+      .if1-goods-have-problems-kDL {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+    }
+    .group1-75-Uf8 {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      display: flex;
+
+      .secure1-payment-Qog {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+      .secure1-payment-LhL {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+    }
+  }
+}
+/*shop2*/
+.categories {
+  display: flex;
+}
+
+.category {
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.image-container {
+  display: none;
+}
+
+.image-container img {
+  max-width: 200px;
+  margin: 5px;
+}
+/*about*/
+.group-1000005979-Fh8 {
+  align-items: flex-start;
+  display: flex;
+  height: 77.3rem;
+  left: 11.3rem;
+  position: absolute;
+  top: 60%;
+  width: 135.3rem;
+
+  .auto-group-pyhk-x5k {
+    flex-shrink: 0;
+    margin: 4.5rem 5.8rem 0rem 0rem;
+    width: 56.2rem;
+
+    .our-story-H82 {
+      color: #000000;
+      font-family: Philosopher, 'Source Sans Pro';
+      font-size: 400%;
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      line-height: 1.28;
+      margin-bottom: 5rem;
+      white-space: nowrap;
+    }
+    .frame-868-buQ {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .lorem1 {
+        color: #000000;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 150%;
+        font-weight: 100;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        max-width: 56.2%;
+      }
+      .lorem2 {
+        color: #000000;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 150%;
+        font-weight: 200;
+        line-height: 1.5;
+        max-width: 53%;
+      }
+    }
+  }
+  .parcel {
+    border-radius: 1rem;
+    flex-shrink: 1;
+    height: 60%;
+    object-fit: cover;
+    vertical-align: top;
+    width: 30%;
+    margin-left: -20%;
+    margin-top: 10%;
+    max-width: 100%;
+    
+  }
+}  .group-1000005978-4iS {
+  height: 70.6629rem;
+  left: 11.3rem;
+  position: absolute;
+  top: 250%;
+  width: 127.7rem;
+
+  .why-choose-us--agn {
+    color: #111111;
+    display: flex;
+    font-family: Philosopher, 'Source Sans Pro';
+    font-size: 250%;
+    font-weight: 700;
+    line-height: 1.2000000763;
+    margin-bottom: 8.1442%;
+    white-space: nowrap;
+  }
+  .group-1000005976-gzi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .auto-group-vx6a-RBc {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+    
+
+      .totally-sustainable-kDt {
+        color: #111111;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 200%;
+        font-weight: 500;
+        line-height: 1.2000000477;
+        margin-right: 41.4rem;
+      }
+      .free-delivery-g7Y {
+        color: #111111;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 200%;
+        font-weight: 500;
+        line-height: 1.2000000477;
+      }
+    }
+    .auto-group-su1p-D7U {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      margin-top: 1%;
+      width: 100%;
+      margin-left: -7%;
+
+      .lorem3{
+        color: #000000;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 150%;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-right: 16.3rem;
+        max-width: 30%;
+        margin-top: 1%;
+      }
+      .lorem4 {
+        color: #000000;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 150%;
+        font-weight: 400;
+        line-height: 1.5;
+        max-width: 30%;
+        margin-left:-3% ;
+      }
+    }  .auto-group-qsns-cJ2 {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      margin: 0rem 31.5rem 3.316rem 0rem;
+      width: calc(100% - 31.5rem);
+
+      .secure-payment-wbC {
+        color: #111111;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 200%;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-right: 45.5rem;
+        white-space: nowrap;
+      }
+      .days-return-Ub8 {
+        color: #111111;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 200%;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+      }
+    }
+    .auto-group-zzox-aPG {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      width: 100%;
+
+      .lorem5{
+        color: #000000;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 150%;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-left: -7%;
+        max-width: 30%;
+      }
+      .lorem6 {
+        color: #000000;
+        flex-shrink: 0;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 150%;
+        font-weight: 400;
+        line-height: 1.5;
+        max-width: 30%;
+        margin-left: 10%;
+      }
+    }
+  }
+}  .group-1000005977-g22 {
+  align-items: center;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 18%;
+  left: 8%;
+  position: absolute;
+  top: 410%;
+  width: 100%;
+  bottom: 20%;
+
+  .auto-group-savi-CFG {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    padding-bottom: 3.2rem;
+    width: 100%;
+
+    .for-inquiries-contact-us-vwx {
+      color: #111111;
+      display: flex;
+      flex-shrink: 0;
+      font-family: Philosopher, 'Source Sans Pro';
+      font-size:250%;
+      font-weight: 700;
+      line-height: 1.2000000763;
+      margin-bottom: 1.15rem;
+      white-space: nowrap;
+    }
+    .please-leave-your-email-and-we-will-send-you-back-ed4 {
+      color: #111111;
+      display: flex;
+      flex-shrink: 1;
+      font-family: Philosopher, 'Source Sans Pro';
+      font-size: 150%;
+      font-weight: 400;
+      line-height: 1.4;
+      white-space: nowrap;
+      margin-bottom: 10%;
+    }
+  }
+  .auto-group-dsjp-NJA {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 20%;
+
+    .input-field-uot {
+      background-color: #ffffff;
+      border: solid 0.1rem #d2d2d7;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      color: #808080;
+      flex-shrink: 0;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 150%;
+      font-weight: 500;
+      height: 100%;
+      line-height: 1.2000000817;
+      margin-right: 1.6rem;
+      padding: 1.95rem 1.6rem;
+      white-space: nowrap;
+      width: 20%;
+      margin-bottom: 20%;
+    }
+    .button--ZdY {
+      align-items: center;
+      background-color: #00693d;
+      border-radius: 0.5rem;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      flex-shrink: 0;
+      font-family: Poppins, 'Source Sans Pro';
+      font-size: 1.6rem;
+      font-weight: 500;
+      height: 100%;
+      justify-content: center;
+      letter-spacing: 0.048rem;
+      line-height: 1.2000000477;
+      text-transform: uppercase;
+      white-space: nowrap;
+      width: 20%;
+      margin-bottom: 20%;
+    }.button--ZdY:hover{
+      background-color: #6b6a6a;
+    }
+  }
+}
+.group1-76-2mC{
+  margin-top: 210%;
+}
+/*editor*/
+#products {
+  display: grid;
+  grid-gap: 20px;
+  margin-top: 10%;
+  width: 100%;
+  height: 20%;
+}
+.product {
+  border: 1px solid #fdfbfb;
+  text-align: center;
+  padding: 10px;
+}
+.product img {
+  max-width: 100%;
+  height: 80%;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.product p {
+  margin-left: 10%;
+  width: 80%;
+  text-align: left;
+}
+.group11-76-2mC {
+
+  background-color: #31aa72;
+  box-sizing: border-box;
+  
+  left: 0;
+  bottom: 5;
+  position: absolute;
+  margin-top: 110px;
+  margin-right: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+
+
+  
+  
+
+  .frame11-859-Lmt {
+    align-items: center;
+    display: flex;
+    height: 120%;
+    width: 111%;
+      margin-bottom: 70%;
+
+    .group1-73-V8z {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-left: 90px;
+      width: 60%;
+      
+
+      .free1-delivery-EcN {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        font: optional;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      
+      }
+      .for1-all-oders-over-500egp-B1p {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+        width: 40%;
+
+      }}}}
+
+      .product {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }image-container{
+      margin-left: 20%;
+    }
+    .group1-76-2mC {
+
+      background-color: #31aa72;
+      box-sizing: border-box;
+      
+      left: 0;
+      bottom: 5;
+      position: absolute;
+      margin-top: 50px;
+      margin-right: 20px;
+      width: 100%;
+      height: 20%;
+      display: flex;
+    
+    
+      
+      
+    
+      .frame1-859-Lmt {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        width: 111%;
+          margin-bottom: 70%;
+    
+        .group1-73-V8z {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 1;
+          height: 100%;
+          margin-left: 90px;
+          width: 60%;
+          
+    
+          .free1-delivery-EcN {
+            color: #ffffff;
+            flex-shrink: 1;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 20px;
+            font-weight: 500;
+            font: optional;
+            line-height: 1.5;
+            white-space: nowrap;
+            display: flex;
+          
+          }
+          .for1-all-oders-over-500egp-B1p {
+            color: #ffffff;
+            flex-shrink: 1;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+            display: flex;
+            width: 40%;
+    
+          }
+        }
+        .group1-74-fxa {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 1;
+          height: 100%;
+          margin-right: 90px;
+          width: 55%;
+    
+          .days1-return-ccv {
+            color: #ffffff;
+            flex-shrink: 1;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+            white-space: nowrap;
+            display: flex;
+          }
+          .if1-goods-have-problems-kDL {
+            color: #ffffff;
+            flex-shrink: 1;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+            display: flex;
+          }
+        }
+        .group1-75-Uf8 {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 1;
+          height: 100%;
+          display: flex;
+    
+          .secure1-payment-Qog {
+            color: #ffffff;
+            flex-shrink: 1;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+            white-space: nowrap;
+            display: flex;
+          }
+          .secure1-payment-LhL {
+            color: #ffffff;
+            flex-shrink: 1;
+            font-family: Poppins, 'Source Sans Pro';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+            display: flex;
+          }
+        }
+      }
+    }
+    
+    .butto2 {
+      width: 20px; /* تحديد عرض الزر */
+      height: 20px; /* تحديد ارتفاع الزر */
+      background-image: url('C:/Users/Win11/Desktop/Graduation Project/user-after-reg/image/1.png'); /* تعيين الصورة */
+      background-size: cover; /* تغطية كاملة للصورة داخل الزر */
+      border: none; /* إزالة الحدود */
+      cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+      background-color: transparent;
+    
+      margin-left: 90%;
+      position: absolute; /* تحديد موقع الصورة بالنسبة للإطار */
+      top: 4%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+      right: 5%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+      max-width: 30%; /* تحديد العرض الأقصى للصورة */
+      max-height: 30%; 
+    }.butto2:hover{
+      background-color: #1a6340 ;
+    }.menu-content {
+      display: none; /* يبدأ مخفيًا */
+      position: absolute; /* تحديد الموقف المطلق للقائمة */
+      background-color: #1a6340 ;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      top: 9%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+      right: 3%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+      max-width: 30%; /* تحديد العرض الأقصى للصورة */
+      max-height: 30%;
+      z-index: 1; /* تحديد ترتيب الطبقات للقائمة */
+      img{
+        width: 10%;
+        height: 10%;
+        margin-right: 5%;
+      }
+    }
+    
+    .menu-content a {
+      display: block;
+      color: rgb(248, 245, 245);
+      padding: 8px 0;
+      text-decoration: none;
+      padding-left: 10%;
+      
+    }
+    
+    .menu-content a:hover {
+      background-color: #ddd;
+    }
+    
+    #menuButton {
+      cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+    }
+    .chatbot{
+      width: 5%;
+      height: 10%;
+      position: fixed;
+     margin-left: 90%;
+  
+    }.butto1 {
+      width: 20px; /* تحديد عرض الزر */
+      height: 20px; /* تحديد ارتفاع الزر */
+      background-image: url('C:/Users/Win11/Desktop/Graduation Project/user-after-reg/image/3.png'); /* تعيين الصورة */
+      background-size: cover; /* تغطية كاملة للصورة داخل الزر */
+      border: none; /* إزالة الحدود */
+      cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+      background-color: transparent;
+    
+      margin-left: 90%;
+      position: absolute; /* تحديد موقع الصورة بالنسبة للإطار */
+      top: 5%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+      right: 5%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+      max-width: 30%; /* تحديد العرض الأقصى للصورة */
+      max-height: 30%; 
+    }.butto1:hover{
+      background-color: #1a6340 ;
+    }.butto2 {
+      width: 20px; /* تحديد عرض الزر */
+      height: 20px; /* تحديد ارتفاع الزر */
+      background-image: url('C:/Users/Win11/Desktop/Graduation Project/user-after-reg/image/1.png'); /* تعيين الصورة */
+      background-size: cover; /* تغطية كاملة للصورة داخل الزر */
+      border: none; /* إزالة الحدود */
+      cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+      background-color: transparent;
+    
+      margin-left: 90%;
+      position: absolute; /* تحديد موقع الصورة بالنسبة للإطار */
+      top: 5%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+      right: 3%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+      max-width: 30%; /* تحديد العرض الأقصى للصورة */
+      max-height: 30%; 
+    }.butto2:hover{
+      background-color: #1a6340 ;
+    }.menu-content {
+      display: none; /* يبدأ مخفيًا */
+      position: absolute; /* تحديد الموقف المطلق للقائمة */
+      background-color: #1a6340 ;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      top: 9%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+      right: 3%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+      max-width: 30%; /* تحديد العرض الأقصى للصورة */
+      max-height: 30%;
+      z-index: 1; /* تحديد ترتيب الطبقات للقائمة */
+      img{
+        width: 10%;
+        height: 10%;
+        margin-right: 5%;
+      }
+    }
+    
+    .menu-content a {
+      display: block;
+      color: rgb(248, 245, 245);
+      padding: 8px 0;
+      text-decoration: none;
+      padding-left: 10%;
+      
+    }
+    
+    .menu-content a:hover {
+      background-color: #ddd;
+    }
+    
+    #menuButton {
+      cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+    }
+    .chatbot{
+      width: 5%;
+      height: 10%;
+      position: fixed;
+     margin-left: 90%;
+    
+    }

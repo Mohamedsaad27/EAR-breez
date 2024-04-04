@@ -1,0 +1,637 @@
+.home {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('Main\ BG.png'); /* تغيير background.jpg إلى اسم ملف الصورة الخلفية الخاص بك */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+nav {
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+  position: fixed;
+  top: 3%;
+  left: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 0px;
+  padding-left: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 150%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.font{
+  color: white;
+  text-align: left;
+  font-size: 300%;
+  margin-top: 15%;
+  margin-left: 5%;
+  font-family:'Times New Roman', Times, serif;
+}.logo {
+  position: absolute;
+  height: 15%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.button-58 {
+  align-items: center;
+  background-color: rgb(22, 134, 78);
+  border: 2px solid rgb(22, 134, 78);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 1%;
+  margin-top: 20px;
+  
+  width: 16%;
+}
+
+.button-58:focus {
+  color: #171e29;
+}
+
+.button-58:hover {
+  background-color: #5d5f5e;
+  border-color: #505051;
+  fill: rgb(81, 82, 83);
+}
+
+.button-58:active {
+  background-color: #5e5f60;
+  border-color: #5f6061;
+  fill: rgb(112, 113, 114);
+}
+.button-59 {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid rgb(246, 248, 247);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 5%;
+  
+  width: 16%;
+}
+
+.button-59:focus {
+  color: #171e29;
+}
+
+.button-59:hover {
+  background-color: #505051;
+  border-color: rgb(101, 100, 100);
+  fill: rgb(101, 100, 100);
+  
+}
+
+.button-59:active {
+  background-color: #5e5f60;
+  border-color: #5f6061;
+  fill: rgb(112, 113, 114);
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}.search-container {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* لتوسيط العناصر رأسياً */
+height: 10px;
+width: 250PX;
+}
+
+.search-container input[type="text"] {
+  padding: 2px;
+  border: 1px solid #fbf8f8;
+  border-radius: 1px;
+  flex: 1; /* السماح للمربع بتمدد لملء المساحة المتبقية */
+}
+
+.search-container img {
+  width: 20px; /* تحديد عرض الصورة */
+  height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+  margin-left: 5px; /* تباعد بين زر البحث والصورة */
+}
+.butto {
+  width: 20px; /* تحديد عرض الزر */
+  height: 20px; /* تحديد ارتفاع الزر */
+  background-image: url('C:/Users/Win11/Desktop/Graduation Project/user-after-reg/image/2.png'); /* تعيين الصورة */
+  background-size: cover; /* تغطية كاملة للصورة داخل الزر */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+  background-color: transparent;
+
+  margin-left: 90%;
+  position: absolute; /* تحديد موقع الصورة بالنسبة للإطار */
+  top: 5%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+  right: 7%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+  max-width: 30%; /* تحديد العرض الأقصى للصورة */
+  max-height: 30%; 
+}.butto:hover{
+  background-color: #1a6340 ;
+}.butto1 {
+  width: 20px; /* تحديد عرض الزر */
+  height: 20px; /* تحديد ارتفاع الزر */
+  background-image: url('C:/Users/Win11/Desktop/Graduation Project/user-after-reg/image/3.png'); /* تعيين الصورة */
+  background-size: cover; /* تغطية كاملة للصورة داخل الزر */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+  background-color: transparent;
+
+  margin-left: 90%;
+  position: absolute; /* تحديد موقع الصورة بالنسبة للإطار */
+  top: 5%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+  right: 5%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+  max-width: 30%; /* تحديد العرض الأقصى للصورة */
+  max-height: 30%; 
+}.butto1:hover{
+  background-color: #1a6340 ;
+}.butto2 {
+  width: 20px; /* تحديد عرض الزر */
+  height: 20px; /* تحديد ارتفاع الزر */
+  background-image: url('C:/Users/Win11/Desktop/Graduation Project/user-after-reg/image/1.png'); /* تعيين الصورة */
+  background-size: cover; /* تغطية كاملة للصورة داخل الزر */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+  background-color: transparent;
+
+  margin-left: 90%;
+  position: absolute; /* تحديد موقع الصورة بالنسبة للإطار */
+  top: 5%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+  right: 3%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+  max-width: 30%; /* تحديد العرض الأقصى للصورة */
+  max-height: 30%; 
+}.butto2:hover{
+  background-color: #1a6340 ;
+}.menu-content {
+  display: none; /* يبدأ مخفيًا */
+  position: absolute; /* تحديد الموقف المطلق للقائمة */
+  background-color: #1a6340 ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 9%; /* تحديد المسافة من الأعلى بالنسبة للإطار */
+  right: 3%; /* تحديد المسافة من اليمين بالنسبة للإطار */
+  max-width: 30%; /* تحديد العرض الأقصى للصورة */
+  max-height: 30%;
+  z-index: 1; /* تحديد ترتيب الطبقات للقائمة */
+  img{
+    width: 10%;
+    height: 10%;
+    margin-right: 5%;
+  }
+}
+
+.menu-content a {
+  display: block;
+  color: rgb(248, 245, 245);
+  padding: 8px 0;
+  text-decoration: none;
+  padding-left: 10%;
+  
+}
+
+.menu-content a:hover {
+  background-color: #ddd;
+}
+
+#menuButton {
+  cursor: pointer; /* تغيير المؤشر إلى شكل يد للإشارة إلى أنه زر قابل للنقر */
+}
+
+
+.text-image-button {
+  width: 20%;
+  color: black;
+  top:80%;
+  left:30%;
+  display: flex; /* تعيين عرض المربع كفليكس */
+  align-items: center; /* توسيط العناصر رأسياً */
+  justify-content: flex; /* توسيط العناصر أفقياً */
+  background-color: transparent; /* إزالة لون الخلفية الافتراضي للزر */
+  border: none; /* إزالة حدود الزر */
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه زر قابل للنقر */
+}
+
+.text-image-button img {
+  margin-right: 10px; /* تباعد بين النص والصورة */
+  width: 30px; /* تحديد عرض الصورة */
+  height: auto; /* السماح بتعديل الارتفاع تلقائياً */
+}
+.text-image-button:hover{
+  background-color: silver;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.div2{
+  margin: 20% auto;
+  margin-bottom: 1%;
+  h4{
+    margin-bottom: -3%;
+    margin-left: 4%;
+  }
+  h1{
+    margin-left: 4%;
+  }
+
+}.div3{
+  margin: 20% auto;
+  margin-bottom: -10%;
+  h4{
+    margin-bottom: -20%;
+    margin-left: 4%;
+  }
+  h1{
+    margin-left: 4%;
+    
+  }}
+.shop-all{
+  
+margin-left: 83%;
+background-color: #1a6340;
+border: 1px solid transparent;
+border-radius: 3px;
+box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+font-size: 13px;
+font-weight: 400;
+line-height: 1.15385;
+outline: none;
+position: relative;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: baseline;
+white-space: nowrap;
+width: 140px;
+height: 50px;
+margin-bottom: -100%;
+
+}
+
+
+
+.shop-all:focus {
+  box-shadow: 0 0 0 4px rgba(164, 164, 165, 0.15);
+}
+
+.shop-all:active {
+  background-color: #949596;
+  box-shadow: none;
+}.shop-all1{
+  
+  margin-left: 83%;
+  background-color: #1a6340;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  width: 140px;
+  height: 50px;
+  margin-top: -50%;
+  
+  }
+  
+  
+  
+  .shop-all1:focus {
+    box-shadow: 0 0 0 4px rgba(153, 154, 155, 0.15);
+  }
+  
+  .shop-all1:active {
+    background-color: #727476;
+    box-shadow: none;
+  }
+.container {
+  max-width: 10000px;
+  margin: 0% auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #faf9f9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 10px;
+  
+}
+
+.product h3 {
+  margin: 0;
+  
+  font-size: 18px;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.rating {
+  color: #f39c12; /* لون النجوم */
+}
+.spacer {
+  height: 1000px; /* ارتفاع المسافة لإظهار التمرير */
+}
+.half-line {
+  width: 80%;
+  margin-top: 7%;
+margin-left: 10%;
+  border-bottom: 2px solid black;
+}
+.container1 {
+  max-width: 10000px;
+  margin: 20% auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20%;
+  margin-top: 1%;
+}
+
+.product {
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #faf9f9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 10px;
+  
+}
+
+.product h3 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.rating {
+  color: #f39c12; /* لون النجوم */
+}
+.spacer {
+  height: 1000px; /* ارتفاع المسافة لإظهار التمرير */
+}
+.content {
+  padding: 20px;
+  margin-top: 130%;
+  margin-bottom: 20%;
+  width: 100%;
+  height: 600px;
+  background-color: #2aa76b;
+}
+.content{
+  img{
+  margin-top: -20%;
+  width: 60%;
+  height: 100%;
+}h1{
+  margin-left: 73%;
+  margin-top: 1%;
+  color: white;
+}h4{
+  margin-left: 70%;
+  margin-top: 10%;
+  color: white;
+  align-items: center;
+}h3{
+  margin-left: 73%;
+  margin-top: 1%;
+  color: white;
+  align-items: center;
+}
+
+}.div6{
+  padding: 1% 1% 1% 1%;
+}
+.group1-76-2mC {
+
+  background-color: #31aa72;
+  box-sizing: border-box;
+  
+  left: 0;
+  bottom: 5;
+  position: absolute;
+  margin-top: 50px;
+  margin-right: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+
+
+  
+  
+
+  .frame1-859-Lmt {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 111%;
+      margin-bottom: 70%;
+
+    .group1-73-V8z {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-left: 90px;
+      width: 60%;
+      
+
+      .free1-delivery-EcN {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        font: optional;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      
+      }
+      .for1-all-oders-over-500egp-B1p {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+        width: 40%;
+
+      }
+    }
+    .group1-74-fxa {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      margin-right: 90px;
+      width: 55%;
+
+      .days1-return-ccv {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+      .if1-goods-have-problems-kDL {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+    }
+    .group1-75-Uf8 {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+      display: flex;
+
+      .secure1-payment-Qog {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+      .secure1-payment-LhL {
+        color: #ffffff;
+        flex-shrink: 1;
+        font-family: Poppins, 'Source Sans Pro';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        display: flex;
+      }
+    }
+  }
+}
+
+  .chatbot{
+    width: 5%;
+    height: 10%;
+    position: fixed;
+   margin-left: 90%;
+
+  }
+
+/*       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& product1 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77&&&&&&7*/
