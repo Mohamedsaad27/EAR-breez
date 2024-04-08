@@ -33,9 +33,16 @@ Route::middleware('auth')->group(function () {
 
 // User Routes
 
-Route::get('user/home',[UserController::class,'home'])->name('user.home');
-Route::get('user/shop',[UserController::class,'shop'])->name('user.shop');
-Route::get('user/order',[UserController::class,'order'])->name('user.order');
+Route::get('user/home',[UserController::class,'home'])
+    ->middleware('auth')->name('user.home');
+Route::get('user/shop',[UserController::class,'shop'])
+    ->middleware('auth')->name('user.shop');
+Route::get('user/order',[UserController::class,'order'])
+    ->middleware('auth')->name('user.order');
+Route::get('user/editorial',[UserController::class,'editorial'])
+    ->middleware('auth')->name('user.editorial');
+Route::get('user/about-us',[UserController::class,'aboutUs'])
+    ->middleware('auth')->name('user.aboutUs');
 
 
 require __DIR__.'/auth.php';

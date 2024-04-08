@@ -10,20 +10,24 @@
 <body>
 <div class="home">
 
-
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button class="btn btn-success" type="submit">
+            Log Out
+        </button>
+    </form>
     <nav>
-        <a href="Home page1.html">Home</a>
-        <a href="shop befoe after reg.html">SHOP</a>
-        <a href="editorial.html">Editorial </a>
-        <a href="about1.html">About </a>
-        <a href="C:/Users/Win11/Desktop/Graduation Project/user-befor-reg/Registration page.html">register </a>
+        <a href="{{route('user.home')}}">Home</a>
+        <a href="{{route('user.shop')}}">SHOP</a>
+        <a href="{{route('user.editorial')}}">Editorial </a>
+        <a href="{{route('user.aboutUs')}}">About </a>
 
     </nav>
     <div class="font">
         <h3>The Platform For </h3>
         <h1>Sustainable Home</h1>
-        <button class="button-58" onclick="window.location.href='shop befoe after reg.html'" role="button">SHOP</button>
-        <button class="button-59" onclick="window.location.href='about1.html'" role="button">LEARN MORE</button>
+        <button class="button-58" onclick="window.location.href='{{route('user.shop')}}'" role="button">SHOP</button>
+        <button class="button-59" onclick="window.location.href='{{route('user.aboutUs')}}'" role="button">LEARN MORE</button>
 
     </div>
     <img src="/assets/image/Logo 1.png" alt=" logo" class="logo">
@@ -39,7 +43,7 @@
         <button class="butto2" id="menuButton"></button>
         <div id="menuContent" class="menu-content">
             <a href="manage-my-account.html"><img src="/assets/image/my.png"> My Account</a>
-            <a href="order-user.html"> <img src="/assets/image/ordd.png">  My Order</a>
+            <a href="{{route('user.order')}}"> <img src="/assets/image/ordd.png">  My Order</a>
             <a href="C:/Users/Win11/Desktop/Graduation Project/user-befor-reg/Registration page.html"><img src="image/logout.png">  Logout</a>
         </div>
     </div>
@@ -47,97 +51,46 @@
         <img class="chatbot" src="/assets/image/ChatBot.png">
     </div>
     <div class="div2">
-        <h1>Discovr</h1>
+        <h1>Top Sales</h1>
         <h4>ELEMENTS OF SUSTAINABLE LIVING</h4>
-        <button class="shop-all" onclick="window.location.href='shop after after reg.html'">SHOP ALL</button>
+        <button class="shop-all" onclick="window.location.href='{{route('user.shop')}}'">SHOP ALL</button>
         <div class="container">
+            @foreach($topSalesProduct as $product)
             <div class="product">
-                <img src="/assets/image/image 1.png" alt="Product 1">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> $50</p>
+                @foreach($product->images as $image)
+                    <img src="image/{{$image->image}}" alt="Product Image">
+                @endforeach
+                    <h3>{{$product->title}} </h3>
+                <h3>{{$product->subtitle}} </h3>
+                <p>{{$product->price}} </p>
                 <div class="rating">
-                    &#9733;&#9733;&#9733;&#9734;&#9734;
+                    {{$product->status}}
                 </div>
             </div>
-            <div class="product">
-                <img src="/assets/image/Frame 612.png" alt="Product 1">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> $50</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9734;&#9734;
-                </div>
-            </div>
-            <div class="product">
-                <img src="/assets/image/Cart (3).png" alt="Product 1">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> $50</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9734;&#9734;
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="/assets/image/image 2.png" alt="Product 2">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> 70EGP</p>
-                <p> 200EGP</p>
-
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9733;&#9734;
-                </div>
-            </div>
-
-
+            @endforeach
         </div>
     </div>
     <div class="half-line"></div>
     <div class="div3">
-
-        <button class="shop-all1" onclick="window.location.href='shope after.html'">SHOP ALL</button>
+        <h1>New Arrivals</h1>
+        <h4>New SUSTAINABLE LIVING</h4>
+        <button class="shop-all1" onclick="window.location.href='{{route('user.shop')}}'">SHOP ALL</button>
         <div class="container1">
-            <div class="product">
-                <img src="/assets/image/image 1.png" alt="Product 1">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> $50</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9734;&#9734;
+            @foreach($NewArrivals as $product)
+                <div class="product">
+                    <div class="product-image">
+                        @foreach($product->images as $image)
+                            <img src="{{ asset('image/' . $image->image) }}" alt="{{ $product->title }}">
+                        @endforeach
+                    </div>
+                    <h3>{{ $product->title }}</h3>
+                    <h3>{{ $product->subtitle }}</h3>
+                    <p>{{ $product->price }}</p>
+                    <div class="rating">
+                        {{ $product->status }}
+                    </div>
                 </div>
-            </div>
-            <div class="product">
-                <img src="/assets/image/Frame 612.png" alt="Product 1">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> $50</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9734;&#9734;
-                </div>
-            </div>
-            <div class="product">
-                <img src="/assets/image/Cart (3).png" alt="Product 1">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> $50</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9734;&#9734;
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="/assets/image/image 2.png" alt="Product 2">
-                <h3>spencer peteman </h3>
-                <h3>spaited maple bowl</h3>
-                <p> 70EGP</p>
-                <p> 200EGP</p>
-
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9733;&#9734;
-                </div>
-            </div>
+            @endforeach
         </div>
 
 
