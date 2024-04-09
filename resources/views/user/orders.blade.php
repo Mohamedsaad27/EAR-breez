@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Orders</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    {{--bootstrap--}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/style-order.css" />
 </head>
 <body>
 <div class="back">
     <nav>
         <ul>
-            <li><a href="Home page1.html">HOME</a></li>
-            <li><a href="shop befoe after reg.html">SHOP</a></li>
-            <li><a href="editorial.html">EDITORIAL</a></li>
-            <li><a href="about1.html">ABOUT</a></li>
+            <li><a href="{{route('user.home')}}">HOME</a></li>
+            <li><a href="{{route('user.shop')}}">SHOP</a></li>
+            <li><a href="{{route('user.editorial')}}">EDITORIAL</a></li>
+            <li><a href="{{route('user.aboutUs')}}">ABOUT</a></li>
 
         </ul>
         <div class="logo-container">
@@ -47,7 +57,6 @@
 <div class="filter-kM2" id="63:4676">
     <div class="custom-search-HLx" id="63:4677">
         <div class="text-PPz" id="63:4678">
-            <input class="placeholder-8sN" id="63:4679" placeholder="Product Name Search">
             <div class="auto-group-4hnw-GCt" id="7BCrzX2ijyPVqEkurV4HnW">
                 <div class="line-1-bW4" id="63:4682"></div>
                 <p class="placeholder-voE" id="63:4683"></p>
@@ -55,86 +64,48 @@
         </div>
         <img class="search-rwn" src="/api/prod-us-east-2-first-cluster/projects/JdGLw99..." id="63:4684"/>
     </div>
-    <div class="select-menu-trigger-jVn" id="63:4686">
-        <select  class="text-raQ" id="63:4687" name="choices">
-            <option value="option1">Status </option>
-            <option value="option2"> 2</option>
-            <option value="option3"> 3</option>
-            <option value="option4"> 4</option>
-        </select>
-        <img class="chevron-down-zRi" src="/api/prod-us-east-2-first-cluster/projects/JdGLw99..." id="63:4688"/>
+    <div class="row my-4">
+        <div class="col-6 ">
+            <div class="">
+                <div class="dropdown ">
+                    <button class="dropbtn btn btn-success ">Show With Status <i class="m-1 bi bi-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="{{route('user.orders.get-by-status', ['new'])}}">new</a>
+                        <a href="{{route('user.orders.get-by-status', ['in production'])}}">in production</a>
+                        <a href="{{route('user.orders.get-by-status', ['shipped'])}}">shipped</a>
+                        <a href="{{route('user.orders.get-by-status', ['cancelled'])}}">canceled</a>
+                        <a href="{{route('user.orders.get-by-status', ['rejected'])}}">rejected</a>
+                        <a href="{{route('user.orders.get-by-status', ['draft'])}}">draft</a>
+                        <a href="{{route('user.order')}}">ALL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <table class="table2">
     <thead>
     <tr>
-        <th> ORDER NUBER</th>
+        <th> ORDER NUMBER</th>
         <th> STATUS</th>
         <th> ITEM</th>
-        <th> STORE NAME</th>
+        <th> Customer NAME</th>
         <th> ORDER DATE</th>
-        <th> REVIEW</th>
+        <th> Price</th>
 
     </tr>
     </thead>
     <tbody>
-
+@foreach($orders as $order)
     <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
+        <td>{{$order->id}}</td>
+        <td>{{$order->status}}</td>
+        <td>{{$order->items}}</td>
+        <td>{{$order->user->name}}</td>
+        <td>{{$order->created_at->format('Y-m-d')}}</td>
+        <td>{{$order->total_value}}</td>
     </tr>
-    <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
-    </tr>
-    <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
-    </tr>
-    <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
-    </tr>
-    <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
-    </tr>
-    <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
-    </tr>
-    <tr>
-        <td>aaaa</td>
-        <td>bbbb</td>
-        <td>cccc</td>
-        <td>dddd</td>
-        <td>eeee</td>
-        <td>ffff</td>
-    </tr>
+@endforeach
     </tbody>
 </table>
 <script>
@@ -151,5 +122,6 @@
         }
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

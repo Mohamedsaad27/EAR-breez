@@ -405,10 +405,10 @@
 <div class="back">
     <nav>
         <ul>
-            <li><a href="Home page1.html">HOME</a></li>
-            <li><a href="shop befoe after reg.html">SHOP</a></li>
-            <li><a href="editorial.html">EDITORIAL</a></li>
-            <li><a href="about1.html">ABOUT</a></li>
+            <li> <a href="{{route('user.home')}}">Home</a></li>
+            <li> <a href="{{route('user.shop')}}">Shop</a></li>
+            <li> <a href="{{route('user.editorial')}}">Editorial</a></li>
+            <li> <a href="{{route('user.aboutUs')}}">About</a></li>
 
         </ul>
         <div class="logo-container">
@@ -428,8 +428,16 @@
         <button class="butto2" id="menuButton"></button>
         <div id="menuContent" class="menu-content">
             <a href="manage-my-account.html"><img src="/assets/image/my.png"> My Account</a>
-            <a href="order-user.html"> <img src="/assets/image/ordd.png">  My Order</a>
-            <a href="C:/Users/Win11/Desktop/Graduation Project/user-befor-reg/Registration page.html"><img src="/assets/image/logout.png">  Logout</a>
+            <a href="{{route('user.order')}}"> <img src="/assets/image/ordd.png">  My Order</a>
+            <a href="C:/Users/Win11/Desktop/Graduation Project/user-befor-reg/Registration page.html">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button class="btn btn-success" type="submit">
+                <img src="/assets/image/logout.png">
+                        Log Out
+                    </button>
+                </form>
+            </a>
         </div>
     </div>
 </div>
@@ -443,14 +451,22 @@
     </div>
 </div>
 <div class="products-container" id="products-container">
+    @foreach($products->chunk(4) as $chunk)
+        <div class="row">
+            @foreach($chunk as $product)
+                <div class="col-md-3">
+                    @foreach($product->images as $image)
+                        <img src="{{ asset('image/' . $image->image) }}" alt="{{ $product->title }}">
+                    @endforeach
+                    <h3>{{ $product->title }}</h3>
+                    <p>Price: {{ $product->price }} EGP</p>
+                    <p>Status: {{ $product->status }}</p>
+                </div>
+            @endforeach
+        </div>
+    @endforeach
 </div>
-<div class="more">
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>.....</button>
-</div>
+
 <div class="group1-76-2mC" id="22:8014">
     <div class="frame1-859-Lmt" id="23:8095">
         <div class="group1-73-V8z" id="22:8016">
@@ -468,77 +484,77 @@
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const productsContainer = document.getElementById('products-container');
+{{--    document.addEventListener('DOMContentLoaded', function () {--}}
+{{--        const productsContainer = document.getElementById('products-container');--}}
 
-        // بيانات المنتجات (تمثيل بسيط)
-        const productsData = [
-            { id: 1, name: 'product 1', image: '/assets/image/a.png', price: 50, rating: '★★★★★ (4)' },
-            { id: 2, name: 'product 2', image: '/assets/image/b.png', price: 60, rating:'★★★ (3)' },
-            { id: 3, name: 'product 3', image: '/assets/image/c.png', price: 70, rating: '★★★★ (5)' },
-            { id: 1, name: 'product 4', image: '/assets/image/a.png', price: 50, rating: '★★★★★ (7)' },
-            { id: 2, name: 'product 5', image: '/assets/image/b.png', price: 60, rating: '★★★(7)' },
-            { id: 3, name: 'product 6', image: '/assets/image/c.png', price: 70, rating: '★★(1)' },
-            { id: 1, name: 'product 7', image: '/assets/image/a.png', price: 50, rating: '★★★★(7)' },
-            { id: 2, name: 'product 8', image: '/assets/image/b.png', price: 60, rating: '★★★(3)' },
-            { id: 3, name: 'product 9', image: '/assets/image/c.png', price: 70, rating: '★★★★★(7)' },
-            { id: 1, name: 'product 1', image: '/assets/image/a.png', price: 50, rating: '★★★★★(2)' },
-            { id: 2, name: 'product 2', image: '/assets/image/b.png', price: 60, rating:'★★★(2)' },
-            { id: 3, name: 'product 3', image: '/assets/image/c.png', price: 70, rating: '★★★★(7)' },
-            { id: 1, name: 'product 4', image: '/assets/image/a.png', price: 50, rating: '★★★★★(7)' },
-            { id: 2, name: 'product 5', image: '/assets/image/b.png', price: 60, rating: '★★★(7)' },
-            { id: 3, name: 'product 6', image: '/assets/image/c.png', price: 70, rating: '★★(7)' },
-            { id: 1, name: 'product 7', image: '/assets/image/a.png', price: 50, rating: '★★★★(7)' },
+{{--        // بيانات المنتجات (تمثيل بسيط)--}}
+{{--        const productsData = [--}}
+{{--            { id: 1, name: 'product 1', image: '/assets/image/a.png', price: 50, rating: '★★★★★ (4)' },--}}
+{{--            { id: 2, name: 'product 2', image: '/assets/image/b.png', price: 60, rating:'★★★ (3)' },--}}
+{{--            { id: 3, name: 'product 3', image: '/assets/image/c.png', price: 70, rating: '★★★★ (5)' },--}}
+{{--            { id: 1, name: 'product 4', image: '/assets/image/a.png', price: 50, rating: '★★★★★ (7)' },--}}
+{{--            { id: 2, name: 'product 5', image: '/assets/image/b.png', price: 60, rating: '★★★(7)' },--}}
+{{--            { id: 3, name: 'product 6', image: '/assets/image/c.png', price: 70, rating: '★★(1)' },--}}
+{{--            { id: 1, name: 'product 7', image: '/assets/image/a.png', price: 50, rating: '★★★★(7)' },--}}
+{{--            { id: 2, name: 'product 8', image: '/assets/image/b.png', price: 60, rating: '★★★(3)' },--}}
+{{--            { id: 3, name: 'product 9', image: '/assets/image/c.png', price: 70, rating: '★★★★★(7)' },--}}
+{{--            { id: 1, name: 'product 1', image: '/assets/image/a.png', price: 50, rating: '★★★★★(2)' },--}}
+{{--            { id: 2, name: 'product 2', image: '/assets/image/b.png', price: 60, rating:'★★★(2)' },--}}
+{{--            { id: 3, name: 'product 3', image: '/assets/image/c.png', price: 70, rating: '★★★★(7)' },--}}
+{{--            { id: 1, name: 'product 4', image: '/assets/image/a.png', price: 50, rating: '★★★★★(7)' },--}}
+{{--            { id: 2, name: 'product 5', image: '/assets/image/b.png', price: 60, rating: '★★★(7)' },--}}
+{{--            { id: 3, name: 'product 6', image: '/assets/image/c.png', price: 70, rating: '★★(7)' },--}}
+{{--            { id: 1, name: 'product 7', image: '/assets/image/a.png', price: 50, rating: '★★★★(7)' },--}}
 
-        ];
+{{--        ];--}}
 
-        // عرض المنتجات
-        function displayProducts() {
-            productsContainer.innerHTML = '';
-            productsData.forEach(product => {
-                const productDiv = document.createElement('div');
-                productDiv.classList.add('product');
-                productDiv.dataset.productId = product.id;
+{{--        // عرض المنتجات--}}
+{{--        function displayProducts() {--}}
+{{--            productsContainer.innerHTML = '';--}}
+{{--            productsData.forEach(product => {--}}
+{{--                const productDiv = document.createElement('div');--}}
+{{--                productDiv.classList.add('product');--}}
+{{--                productDiv.dataset.productId = product.id;--}}
 
-                const productHTML = `
-                        <img src="${product.image}" alt="${product.name}">
-                        <h3>${product.name}</h3>
-                        <p>Price: ${product.price} EGP</p>
-                        <p> ${product.rating} </p>
-                    `;
-                productDiv.innerHTML = productHTML;
+{{--                const productHTML = `--}}
+{{--                        <img src="${product.image}" alt="${product.name}">--}}
+{{--                        <h3>${product.name}</h3>--}}
+{{--                        <p>Price: ${product.price} EGP</p>--}}
+{{--                        <p> ${product.rating} </p>--}}
+{{--                    `;--}}
+{{--                productDiv.innerHTML = productHTML;--}}
 
-                productsContainer.appendChild(productDiv);
-            });
-        }
+{{--                productsContainer.appendChild(productDiv);--}}
+{{--            });--}}
+{{--        }--}}
 
-        // العرض الأول للمنتجات
-        displayProducts(8);
+{{--        // العرض الأول للمنتجات--}}
+{{--        displayProducts(8);--}}
 
-        // تحويل المستخدم إلى صفحة التفاصيل عند النقر على المنتج
-        productsContainer.addEventListener('click', function (event) {
-            const productId = event.target.closest('.product').dataset.productId;
-            window.location.href = `product1.html?id=${productId}`;
-        });
+{{--        // تحويل المستخدم إلى صفحة التفاصيل عند النقر على المنتج--}}
+{{--        productsContainer.addEventListener('click', function (event) {--}}
+{{--            const productId = event.target.closest('.product').dataset.productId;--}}
+{{--            window.location.href = `product1.html?id=${productId}`;--}}
+{{--        });--}}
 
-        var productsPerPage = 4;
+{{--        var productsPerPage = 4;--}}
 
-// عرض المنتجات الأولى عند تحميل الصفحة
-        displayProducts(0, productsPerPage);
+{{--// عرض المنتجات الأولى عند تحميل الصفحة--}}
+{{--        displayProducts(0, productsPerPage);--}}
 
-// عرض المزيد عند الضغط على الزر
-        document.getElementById('load-more-btn').addEventListener('click', function() {
-            // إخفاء المنتجات القديمة
-            var oldProducts = document.querySelectorAll('.product');
-            oldProducts.forEach(function(product) {
-                product.style.display = 'none';
-            });
+{{--// عرض المزيد عند الضغط على الزر--}}
+{{--        document.getElementById('load-more-btn').addEventListener('click', function() {--}}
+{{--            // إخفاء المنتجات القديمة--}}
+{{--            var oldProducts = document.querySelectorAll('.product');--}}
+{{--            oldProducts.forEach(function(product) {--}}
+{{--                product.style.display = 'none';--}}
+{{--            });--}}
 
-            // عرض المزيد من المنتجات الجديدة
-            displayProducts(oldProducts.length, productsPerPage);
-        });
+{{--            // عرض المزيد من المنتجات الجديدة--}}
+{{--            displayProducts(oldProducts.length, productsPerPage);--}}
+{{--        });--}}
 
-    });
+{{--    });--}}
 
     document.getElementById("menuButton").addEventListener("click", function() {
         var menu = document.getElementById("menuContent");

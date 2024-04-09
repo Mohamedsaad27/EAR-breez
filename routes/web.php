@@ -44,6 +44,11 @@ Route::get('user/editorial',[UserController::class,'editorial'])
 Route::get('user/about-us',[UserController::class,'aboutUs'])
     ->middleware('auth')->name('user.aboutUs');
 
+Route::get('user/orders/get-by-status/{status}', [UserController::class, 'get_by_status'])
+    ->name('user.orders.get-by-status');
+
+Route::get('user/orders/{order}/{status}', [UserController::class, 'order_update'])
+    ->name('user.orders.order-update');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

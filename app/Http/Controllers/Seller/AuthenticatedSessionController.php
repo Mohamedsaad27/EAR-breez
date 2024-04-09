@@ -30,5 +30,4 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/seller-login');
     }
-
 }

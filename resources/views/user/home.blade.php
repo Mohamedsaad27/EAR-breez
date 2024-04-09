@@ -10,12 +10,12 @@
 <body>
 <div class="home">
 
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <button class="btn btn-success" type="submit">
-            Log Out
-        </button>
-    </form>
+{{--    <form method="POST" action="{{ route('logout') }}">--}}
+{{--        @csrf--}}
+{{--        <button class="btn btn-success" type="submit">--}}
+{{--            Log Out--}}
+{{--        </button>--}}
+{{--    </form>--}}
     <nav>
         <a href="{{route('user.home')}}">Home</a>
         <a href="{{route('user.shop')}}">SHOP</a>
@@ -58,7 +58,7 @@
             @foreach($topSalesProduct as $product)
             <div class="product">
                 @foreach($product->images as $image)
-                    <img src="image/{{$image->image}}" alt="Product Image">
+                    <img src="{{ asset('image/' . $image->image) }}" alt="{{ $product->title }}">
                 @endforeach
                     <h3>{{$product->title}} </h3>
                 <h3>{{$product->subtitle}} </h3>
@@ -72,8 +72,8 @@
     </div>
     <div class="half-line"></div>
     <div class="div3">
-        <h1>New Arrivals</h1>
-        <h4>New SUSTAINABLE LIVING</h4>
+{{--        <h1>New Arrivals</h1>--}}
+{{--        <h4>New SUSTAINABLE LIVING</h4>--}}
         <button class="shop-all1" onclick="window.location.href='{{route('user.shop')}}'">SHOP ALL</button>
         <div class="container1">
             @foreach($NewArrivals as $product)
@@ -106,28 +106,21 @@
     <img src="/assets/image/Asgaard sofa 1.png">
 </div>
 <div class="container1">
-    <div class="product">
-        <img src="/assets/image/image 1.png" alt="Product 1">
-        <h4>don't miss our SPECIAL NEW ARRIVALS</h4>
-        <h3>SPECIAL NEW ARRIVALS</h3>
-
-    </div>
-    <div class="product">
-        <img src="/assets/image/Frame 612.png" alt="Product 1">
-        <h4>don't miss our SPECIAL NEW ARRIVALS</h4>
-        <h3>SPECIAL NEW ARRIVALS</h3>
-
-    </div>
-    <div class="product">
-        <img src="/assets/image/Cart (3).png" alt="Product 1">
-        <h4>don't miss our SPECIAL NEW ARRIVALS</h4>
-        <h3>SPECIAL NEW ARRIVALS</h3>
-
-    </div>
-
-
-
-
+   @foreach($topPriceOfProduct as $product)
+        <div class="product">
+            <div class="product-image">
+                @foreach($product->images as $image)
+                    <img src="{{ asset('image/' . $image->image) }}" alt="{{ $product->title }}">
+                @endforeach
+            </div>
+            <h3>{{ $product->title }}</h3>
+            <h3>{{ $product->subtitle }}</h3>
+            <p>{{ $product->price }}</p>
+            <div class="rating">
+                {{ $product->status }}
+            </div>
+        </div>
+    @endforeach
 </div>
 </div>
 <div class="group1-76-2mC" id="22:8014">
