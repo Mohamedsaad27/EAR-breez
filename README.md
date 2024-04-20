@@ -33,10 +33,12 @@ Welcome to our Wooden Products E-commerce platform! This platform enables users 
 ## Setup Instructions
 
 1. Clone the repository to your local machine.
-2. Install dependencies by running `npm install` or `yarn install`.
-3. Configure environment variables.
-4. Run the application using `npm start` or `yarn start`.
-5. Access the application through the provided URL.
+2. Install dependencies by running `npm install`
+3. Install dependencies by running `composer install` and `composer update`
+4. Install dependencies by running `php artisan key:generate `
+5. Configure environment variables.
+6. Run the application using `php artisan serve`.
+7. Access the application through the provided URL.
 
 ## Technologies Used
 
