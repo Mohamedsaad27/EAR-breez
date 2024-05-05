@@ -42,23 +42,23 @@
                                 <div class="col-6">
                                     <label class="form-label">Title <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input id="title" name="title" type="text" class=" form-control" placeholder="Title Of Product" />
+                                        <x-text-input id="title" name="title" type="text" value="{{old('title')}}" class=" form-control" placeholder="Title Of Product" />
                                     </div>
-                                       <x-input-error class="text-danger" :messages="$errors->get('title')" />
+                                       <x-input-error class="text-danger" :messages="$errors->get('title')"  />
                                 </div>
                                 <div class="col-6">
                                     <label class="form-label">Subtitle</label>
                                     <div class="input-group mb-3">
-                                        <x-text-input id="subtitle" name="subtitle" type="text" class="form-control" placeholder="Subtitle Of Product" />
+                                        <x-text-input id="subtitle" name="subtitle" type="text" value="{{old('subtitle')}}" class="form-control" placeholder="Subtitle Of Product" />
                                     </div>
-                                    <x-input-error class="text-danger" :messages="$errors->get('subtitle')" />
+                                    <x-input-error class="text-danger"  :messages="$errors->get('subtitle')" />
                                 </div>
                             </div>
                             <!--Description-->
                             <div class="row">
                                 <label class="form-label">Description</label>
                                 <div class="input-group mb-3">
-                                    <x-text-input style="height: 100px" id="description" placeholder="Enter Description" name="description" type="text" class="form-control" />
+                                    <x-text-input value="{{old('description')}}" style="height: 100px" id="description" placeholder="Enter Description" name="description" type="text" class="form-control" />
                                 </div>
                                 <x-input-error class="text-danger" :messages="$errors->get('description')" />
                                 <p class="input-info">Give your product a short and clear title.</p>
@@ -69,21 +69,21 @@
                                 <div class="col-4">
                                     <label class="form-label">Available Quantity<span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input style=" " placeholder="Quantity" id="quantity" name="quantity" type="text" class="form-control" />
+                                        <x-text-input value="{{old('quantity')}}" style=" " placeholder="Quantity" id="quantity" name="quantity" type="text" class="form-control" />
                                     </div>
                                     <x-input-error class="text-danger" :messages="$errors->get('quantity')" />
                                 </div>
                                 <div class="col-4">
                                     <label class="form-label">Price EGP<span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input style=" " id="price" placeholder="Price" name="price" type="text" class="form-control"/>
+                                        <x-text-input value="{{old('quantity')}}" style=" " id="price" placeholder="Price" name="price" type="text" class="form-control"/>
                                     </div>
                                     <x-input-error class="text-danger" :messages="$errors->get('price')" />
                                 </div>
                                 <div class="col-4">
                                     <label class="form-label">Offer Percentage<span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <x-text-input style=" " id="offer" placeholder="Offer" name="offer" type="text" class="form-control" />
+                                        <x-text-input value="{{old('offer')}}" style=" " id="offer" placeholder="Offer" name="offer" type="text" class="form-control" />
                                     </div>
                                     <x-input-error class="text-danger" :messages="$errors->get('offer')" />
                                 </div>
@@ -105,7 +105,7 @@
                                         <tr>
                                             <td>color</td>
                                             <td>
-                                                <x-text-input style="" id="color" placeholder="Color Of Product" name="color" type="text" class="form-control" />
+                                                <x-text-input value="{{old('color')}}" style="" id="color" placeholder="Color Of Product" name="color" type="text" class="form-control" />
                                                 <x-input-error class="text-danger" :messages="$errors->get('color')" />
                                             </td>
                                         </tr>
@@ -113,7 +113,7 @@
                                         <tr>
                                             <td>Size</td>
                                             <td>
-                                                <x-text-input style=" " id="size"   placeholder="Size Of Product" name="size" type="text" class="form-control" />
+                                                <x-text-input value="{{old('size')}}" style=" " id="size"   placeholder="Size Of Product" name="size" type="text" class="form-control" />
                                                 <x-input-error class="text-danger"  :messages="$errors->get('size')" />
                                             </td>
                                         </tr>

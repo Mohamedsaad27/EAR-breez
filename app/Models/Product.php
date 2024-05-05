@@ -49,7 +49,10 @@ class Product extends Model
     {
         return $this->hasOne(ProductVariation::class);
     }
-
+    public function carts(): BelongsToMany
+    {
+        return $this->belongsToMany(Cart::class, 'cart_product', 'product_id', 'cart_id');
+    }
     public function scopeSearch($query,$value){
         $query->where('id','like',"%{$value}%")
               ->orWhere('title','like',"%{$value}%")

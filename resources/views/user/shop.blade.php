@@ -424,7 +424,14 @@
     <div class="line"></div>
     <h1 class="shop2">Shop</h1>
     <div>
-        <button class="butto1"onclick="window.location.href='shoping card.html'"></button>
+        <button class="butto1" onclick="redirectToCart()"></button>
+
+        <script>
+            function redirectToCart() {
+                // Redirect the user to the user.cart route
+                window.location.href = "{{ route('user.cart') }}";
+            }
+        </script>
         <button class="butto2" id="menuButton"></button>
         <div id="menuContent" class="menu-content">
             <a href="manage-my-account.html"><img src="/assets/image/my.png"> My Account</a>
@@ -461,6 +468,13 @@
                     <h3>{{ $product->title }}</h3>
                     <p>Price: {{ $product->price }} EGP</p>
                     <p>Status: {{ $product->status }}</p>
+                        <form action="{{ route('cart.add', ['product_id' => $product->id]) }}" method="post">
+                            @csrf
+                            <button type="submit">
+                                <img src="{{ asset('image/download.png') }}" style="width: 24px; height: 24px;" alt="Add to Cart">
+                                <span style="display: block;">Add to Cart</span>
+                            </button>
+                        </form>
                 </div>
             @endforeach
         </div>

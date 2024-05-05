@@ -27,7 +27,7 @@
                     });
                 </script>
             @endif
-
+            @if($businessInformationBySellerId)
             <form action="{{route('seller.storeEditBusinessInformation',$businessInformationBySellerId->seller_id)}}" method="post">
                 @csrf
                 <div class="row border rounded ms-4 pb-4">
@@ -161,7 +161,8 @@
                     </div>
                 </div>
             </form>
-            <div class="d-flex align-items-center justify-content-between mt-5">
+            @endif
+                <div class="d-flex align-items-center justify-content-between mt-5">
                 <div>
                     <h2 class="m-0">Request to withdraw</h2>
                     <p class="m-0 fs-3">your Available Balance</p>

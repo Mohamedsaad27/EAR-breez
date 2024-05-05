@@ -43,13 +43,21 @@ Route::get('user/editorial',[UserController::class,'editorial'])
     ->middleware('auth')->name('user.editorial');
 Route::get('user/about-us',[UserController::class,'aboutUs'])
     ->middleware('auth')->name('user.aboutUs');
-
+Route::get('user/cart',[UserController::class,'Cart'])
+    ->middleware('auth')->name('user.cart');
 Route::get('user/orders/get-by-status/{status}', [UserController::class, 'get_by_status'])
     ->name('user.orders.get-by-status');
 
+
+//Route::match(['get', 'post'], 'user/add-to-cart/{product_id}', [UserController::class, 'addProductToCart'])->name('cart.add');
+Route::post('user/add-to-cart',[UserController::class,'addProductToCart'])
+    ->middleware('auth')->name('cart.add');
+
+
+
 Route::get('user/orders/{order}/{status}', [UserController::class, 'order_update'])
     ->name('user.orders.order-update');
-
+Route::delete('/cart/{id}', [UserController::class, 'remove'])->name('cart.remove');
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
 require __DIR__.'/seller.php';

@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
         Auth::guard('seller')->login($user);
-        return redirect('seller/add-business-information');
+        return redirect()->route('seller.addBusinessInformation');
 
     }
 }

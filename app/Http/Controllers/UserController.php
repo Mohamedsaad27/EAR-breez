@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -10,6 +11,32 @@ use Illuminate\View\View;
 
 class UserController extends Controller
 {
+    public function addProductToCart(Request $request)
+    {
+        $productId = $request->input('product_id');
+        $user = Auth::user();
+        $product = Product::findOrFail($productId);
+
+        // Get the user's cart
+        $cart = $user->cart;
+
+        // If the user doesn't have a cart, create a new one
+        if (!$cart) {
+            $cart = $user->cart()->create([
+                'user_id'=>$user->id,
+                'product_id'=>$productId
+            ]);
+        }
+
+        // Attach the product to the user's cart
+        $cart->products()->attach($product);
+
+        // Calculate subtotal and total prices
+
+
+        return redirect()->back()->with('success', 'Product added to cart successfully');
+    }
+
     public function home()
     {
         $topSalesProduct = Product::with('images')
@@ -46,6 +73,23 @@ class UserController extends Controller
     }
     public function aboutUs(){
         return view('user.aboutUs');
+    }
+    public function Cart()
+    {
+        $user = Auth::user();
+        $cart = $user->cart;
+        $cartItems = $cart->products;
+        $subtotal = $cart->products->sum('price');
+        $total = $subtotal;
+        return view('user.cart', compact('cartItems','subtotal','total'));
+    }
+    public function remove($id)
+    {
+        $user = Auth::user();
+        $cart = $user->cart;
+        $cart->products()->detach($id);
+
+        return redirect()->route('user.cart')->with('success', 'Product removed from cart.');
     }
     public function get_by_status($status): view
     {
