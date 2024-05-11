@@ -76,18 +76,16 @@
 {{--        <h4>New SUSTAINABLE LIVING</h4>--}}
         <button class="shop-all1" onclick="window.location.href='{{route('user.shop')}}'">SHOP ALL</button>
         <div class="container1">
-            @foreach($NewArrivals as $product)
+            @foreach($newArrivals as $product)
                 <div class="product">
-                    <div class="product-image">
-                        @foreach($product->images as $image)
-                            <img src="{{ asset('image/' . $image->image) }}" alt="{{ $product->title }}">
-                        @endforeach
-                    </div>
-                    <h3>{{ $product->title }}</h3>
-                    <h3>{{ $product->subtitle }}</h3>
-                    <p>{{ $product->price }}</p>
+                    @foreach($product->images as $image)
+                        <img src="{{ asset('image/' . $image->image) }}" alt="{{ $product->title }}">
+                    @endforeach
+                    <h3>{{$product->title}} </h3>
+                    <h3>{{$product->subtitle}} </h3>
+                    <p>{{$product->quantity}} </p>
                     <div class="rating">
-                        {{ $product->status }}
+                        {{$product->status}}
                     </div>
                 </div>
             @endforeach

@@ -54,7 +54,7 @@ class UserController extends Controller
 
         return view('user.home', [
             'topSalesProduct' => $topSalesProduct,
-            'NewArrivals' => $newArrivals,
+            'newArrivals' => $newArrivals,
             'topPriceOfProduct'=>$topPriceOfProduct
         ]);
     }
